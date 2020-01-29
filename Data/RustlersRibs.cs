@@ -31,7 +31,18 @@ namespace CowboyCafe.Data
             }
         }
 
-        
+        public List<string> SpecialInstructions
+        {
+            get
+            {
+                var instructions = new List<string>();
+
+
+                return instructions;
+            }
+        }
+
+
     }
 }
 

@@ -8,6 +8,16 @@ namespace CowboyCafe.Data
     /// </summary>
     public class TexasTripleBurger
     {
+        private bool bun = true;
+        /// <summary>
+        /// If the burger has a bun
+        /// </summary>
+        public bool Bun
+        {
+            get { return bun; }
+            set { bun = value; }
+        }
+
         private bool cheese = true;
         /// <summary>
         /// If the burger has cheese
@@ -129,6 +139,7 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
+                if (!bun) instructions.Add("hold bun");
                 if (!cheese) instructions.Add("hold cheese");
                 if (!ketchup) instructions.Add("hold ketchup");
                 if (!mustard) instructions.Add("hold mustard");
