@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Jack Mravunac
+* CornDodgers.cs 
+* Class representing the corn dodgers side
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

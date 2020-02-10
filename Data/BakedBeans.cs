@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Jack Mravunac
+* BakedBeans.cs 
+* Class representing the baked beans side
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

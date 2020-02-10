@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Jack Mravunac
+* PanDeCampo.cs 
+* Class representing the Pan De Campo side
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

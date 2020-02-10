@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Jack Mravunac
+* Entree.cs 
+* Base class for the entrees
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

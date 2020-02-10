@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Jack Mravunac
+* ChiliCheeseFries.cs 
+* Class representing the chili cheese fries side
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
