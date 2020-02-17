@@ -15,7 +15,7 @@ namespace CowboyCafe.Data
     public abstract class Entree
     {
         /// <summary>
-        /// Gets the price of the side
+        /// Gets the price of the entree
         /// </summary>
         public abstract double Price { get; }
 
@@ -24,7 +24,9 @@ namespace CowboyCafe.Data
         /// </summary>
         public abstract uint Calories { get; }
 
-
+        /// <summary>
+        /// Gets the list of special instructions for the entree
+        /// </summary>
         public abstract List<String> SpecialInstructions { get; }
     }
 }

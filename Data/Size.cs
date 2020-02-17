@@ -1,7 +1,7 @@
 ﻿/*
 * Nathan Bean
 * Edited by Jack Mravunac
-* CornDodgers.cs 
+* Size.cs 
 * Enum for the sizes of the sides
 */
 using System;
