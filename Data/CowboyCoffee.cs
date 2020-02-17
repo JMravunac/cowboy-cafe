@@ -78,8 +78,16 @@ namespace CowboyCafe.Data
             set { decaf = value; }
         }
 
+        /// <summary>
+        /// sets coffee to default to no ice
+        /// </summary>
+        private bool ice = false;
         
-        
+        public override bool Ice
+        {
+            get { return ice; }
+            set { ice = value; }
+        }
 
         /// <summary>
         /// Special instructions for the coffee
