@@ -31,11 +31,27 @@
             <TextBlock TextAlignment="Center">Entrees</TextBlock>
         <Button Name ="AddAngryChickenButton">Angry Chicken</Button>
         <Button Name ="AddCowpokeChiliButton">Cowpoke Chili</Button>
-        
+        <Button Name ="AddRustlersRibsButton">Rustler's Ribs</Button>
+        <Button Name ="AddPecosPulledPorkButton">Pecos Pulled Pork</Button>
+        <Button Name ="AddTrailBurgerButton">Trail Burger</Button>
+        <Button Name ="AddDakotaDoubleBurgerButton">Dakota Double Burger</Button>
+        <Button Name ="AddTexasTripleBurgerButton">Texas Triple Burger</Button>
+
         </StackPanel>
 
         <StackPanel Grid.Column="1">
             <TextBlock TextAlignment="Center">Sides</TextBlock>
         </StackPanel>
+
+        <StackPanel Grid.Column="2">
+            <TextBlock TextAlignment="Center">Drinks</TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Column="3">
+            <TextBlock TextAlignment="Center">Order</TextBlock>
+            <ListBox Name ="OrderList"></ListBox>
+        </StackPanel>
+
+
     </Grid>
 </UserControl>
