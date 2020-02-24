@@ -56,5 +56,21 @@ namespace CowboyCafe.Data
 
             }
         }
+
+        public override string ToString()
+        {
+            switch (Size)
+            {
+                case Size.Large:
+                    return "Large Pan De Campo";
+                case Size.Medium:
+                    return "Medium Pan De Campo";
+                case Size.Small:
+                    return "Small Pan De Campo";
+                default:
+                    throw new NotImplementedException("Unknown size");
+
+            }
+        }
     }
 }

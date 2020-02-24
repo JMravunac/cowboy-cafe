@@ -81,5 +81,20 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+        public override string ToString()
+        {
+            switch (Size)
+            {
+                case Size.Large:
+                    return "Large Jerked Soda";
+                case Size.Medium:
+                    return "Medium Jerked Soda";
+                case Size.Small:
+                    return "Small Jerked Soda";
+                default:
+                    throw new NotImplementedException("Unknown size");
+
+            }
+        }
     }
 }

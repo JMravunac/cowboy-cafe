@@ -110,5 +110,21 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
+        public override string ToString()
+        {
+            switch (Size)
+            {
+                case Size.Large:
+                    return "Large Texas Tea";
+                case Size.Medium:
+                    return "Medium Texas Tea";
+                case Size.Small:
+                    return "Small Texas Tea";
+                default:
+                    throw new NotImplementedException("Unknown size");
+
+            }
+        }
     }
 }
