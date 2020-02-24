@@ -29,6 +29,16 @@ namespace PointOfSale
             AddTrailBurgerButton.Click += AddTrailBurgerButtonClick;
             AddDakotaDoubleBurgerButton.Click += AddDakotaDoubleBurgerButtonClick;
             AddTexasTripleBurgerButton.Click += AddTexasTripleBurgerButtonClick;
+
+            AddChiliCheeseFriesButton.Click += AddChiliCheeseFriesButtonClick;
+            AddCornDodgersButton.Click += AddCordDodgersButtonClick;
+            AddPanDeCampoButton.Click += AddPanDeCampoButtonClick;
+            AddBakedBeansButton.Click += AddBakedBeansButtonClick;
+
+            AddJerkedSodaButton.Click += AddJerkedSodaButtonClick;
+            AddTexasTeaButton.Click += AddTexasTeaButtonClick;
+            AddCowboyCoffeeButton.Click += AddCowboyCoffeeButtonClick;
+            AddWaterButton.Click += AddWaterButtonClick;
         }
 
         private void AddAngryChickenButtonClick(object sender, RoutedEventArgs e)
@@ -65,6 +75,46 @@ namespace PointOfSale
         private void AddTexasTripleBurgerButtonClick(object sender, RoutedEventArgs e)
         {
             OrderList.Items.Add(new TexasTripleBurger());
+        }
+
+        private void AddChiliCheeseFriesButtonClick(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new ChiliCheeseFries());
+        }
+
+        private void AddCordDodgersButtonClick(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new CornDodgers());
+        }
+
+        private void AddPanDeCampoButtonClick(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new PanDeCampo());
+        }
+
+        private void AddBakedBeansButtonClick(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new BakedBeans());
+        }
+
+        private void AddJerkedSodaButtonClick(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new JerkedSoda());
+        }
+
+        private void AddTexasTeaButtonClick(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new TexasTea());
+        }
+
+        private void AddCowboyCoffeeButtonClick(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new CowboyCoffee());
+        }
+
+        private void AddWaterButtonClick(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new Water());
         }
     }
 }
