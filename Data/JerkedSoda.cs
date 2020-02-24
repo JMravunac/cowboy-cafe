@@ -86,11 +86,11 @@ namespace CowboyCafe.Data
             switch (Size)
             {
                 case Size.Large:
-                    return "Large Jerked Soda";
+                    return $"Large {SodaFlavor} Jerked Soda";
                 case Size.Medium:
-                    return "Medium Jerked Soda";
+                    return $"Medium {SodaFlavor} Jerked Soda";
                 case Size.Small:
-                    return "Small Jerked Soda";
+                    return $"Small {SodaFlavor} Jerked Soda";
                 default:
                     throw new NotImplementedException("Unknown size");
 
