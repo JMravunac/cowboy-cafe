@@ -22,99 +22,27 @@ namespace PointOfSale
         public OrderControl()
         {
             InitializeComponent();
-            AddAngryChickenButton.Click += AddAngryChickenButtonClick;
-            AddCowpokeChiliButton.Click += AddCowpokeChiliButtonClick;
-            AddRustlersRibsButton.Click += AddRustlersRibsButtonClick;
-            AddPecosPulledPorkButton.Click += AddPecosPulledPorkButtonClick;
-            AddTrailBurgerButton.Click += AddTrailBurgerButtonClick;
-            AddDakotaDoubleBurgerButton.Click += AddDakotaDoubleBurgerButtonClick;
-            AddTexasTripleBurgerButton.Click += AddTexasTripleBurgerButtonClick;
+            ItemSelectionButton.Click += ItemSelectionButtonClick;
+            CancelOrderButton.Click += CancelOrderButtonClick;
+            CompleteOrderButton.Click += CompleteOrderButtonClick;
 
-            AddChiliCheeseFriesButton.Click += AddChiliCheeseFriesButtonClick;
-            AddCornDodgersButton.Click += AddCordDodgersButtonClick;
-            AddPanDeCampoButton.Click += AddPanDeCampoButtonClick;
-            AddBakedBeansButton.Click += AddBakedBeansButtonClick;
-
-            AddJerkedSodaButton.Click += AddJerkedSodaButtonClick;
-            AddTexasTeaButton.Click += AddTexasTeaButtonClick;
-            AddCowboyCoffeeButton.Click += AddCowboyCoffeeButtonClick;
-            AddWaterButton.Click += AddWaterButtonClick;
         }
 
-        private void AddAngryChickenButtonClick(object sender, RoutedEventArgs e)
+        private void ItemSelectionButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new AngryChicken());
+            
         }
 
         
-        private void AddCowpokeChiliButtonClick(object sender, RoutedEventArgs e)
+        private void CancelOrderButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new CowpokeChili());
+            this.DataContext = new Order();
         }
 
-        private void AddRustlersRibsButtonClick(object sender, RoutedEventArgs e)
+        private void CompleteOrderButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new RustlersRibs());
+            this.DataContext = new Order();
         }
 
-        private void AddPecosPulledPorkButtonClick(object sender, RoutedEventArgs e)
-        {
-            OrderList.Items.Add(new PecosPulledPork());
-        }
-
-        private void AddTrailBurgerButtonClick(object sender, RoutedEventArgs e)
-        {
-            OrderList.Items.Add(new TrailBurger());
-        }
-
-        private void AddDakotaDoubleBurgerButtonClick(object sender, RoutedEventArgs e)
-        {
-            OrderList.Items.Add(new DakotaDoubleBurger());
-        }
-
-        private void AddTexasTripleBurgerButtonClick(object sender, RoutedEventArgs e)
-        {
-            OrderList.Items.Add(new TexasTripleBurger());
-        }
-
-        private void AddChiliCheeseFriesButtonClick(object sender, RoutedEventArgs e)
-        {
-            OrderList.Items.Add(new ChiliCheeseFries());
-        }
-
-        private void AddCordDodgersButtonClick(object sender, RoutedEventArgs e)
-        {
-            OrderList.Items.Add(new CornDodgers());
-        }
-
-        private void AddPanDeCampoButtonClick(object sender, RoutedEventArgs e)
-        {
-            OrderList.Items.Add(new PanDeCampo());
-        }
-
-        private void AddBakedBeansButtonClick(object sender, RoutedEventArgs e)
-        {
-            OrderList.Items.Add(new BakedBeans());
-        }
-
-        private void AddJerkedSodaButtonClick(object sender, RoutedEventArgs e)
-        {
-            OrderList.Items.Add(new JerkedSoda());
-        }
-
-        private void AddTexasTeaButtonClick(object sender, RoutedEventArgs e)
-        {
-            OrderList.Items.Add(new TexasTea());
-        }
-
-        private void AddCowboyCoffeeButtonClick(object sender, RoutedEventArgs e)
-        {
-            OrderList.Items.Add(new CowboyCoffee());
-        }
-
-        private void AddWaterButtonClick(object sender, RoutedEventArgs e)
-        {
-            OrderList.Items.Add(new Water());
-        }
     }
 }
