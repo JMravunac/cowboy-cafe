@@ -22,6 +22,8 @@ namespace PointOfSale
         public MenuItemSelectionControl()
         {
             InitializeComponent();
+
+            //Button handlers
             AddAngryChickenButton.Click += AddAngryChickenButtonClick;
             AddCowpokeChiliButton.Click += AddCowpokeChiliButtonClick;
             AddRustlersRibsButton.Click += AddRustlersRibsButtonClick;
@@ -41,6 +43,7 @@ namespace PointOfSale
             AddWaterButton.Click += AddWaterButtonClick;
         }
 
+        //Each method adds the corresponding item to the current order
         private void AddAngryChickenButtonClick(object sender, RoutedEventArgs e)
         {
             AngryChicken temp = new AngryChicken();
