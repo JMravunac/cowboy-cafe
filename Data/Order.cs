@@ -7,7 +7,7 @@ namespace CowboyCafe.Data
 {
     public class Order : INotifyPropertyChanged
     {
-        private uint lastOrderNumber = 0;
+        private static uint lastOrderNumber = 0;
 
         private List<IOrderItem> items = new List<IOrderItem>();
 
@@ -17,13 +17,18 @@ namespace CowboyCafe.Data
         {
             get
             {
-                return Subtotal;
+                double subTotal = 0.0;
+                foreach(IOrderItem item in items)
+                {
+                    subTotal += item.Price;
+                }
+                return subTotal;
             }
         }
 
-        public uint OrderNumber => lastOrderNumber++;
+        public static uint OrderNumber { get { return lastOrderNumber++; } }
 
-        public IEnumerable<IOrderItem> Items => throw new NotImplementedException();
+        public IEnumerable<IOrderItem> Items => items.ToArray();
 
         public void Add(IOrderItem item)
         {

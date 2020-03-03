@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="150">
+             d:DesignHeight="450" d:DesignWidth="125">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="4*">
@@ -14,12 +14,16 @@
             <ColumnDefinition>
 
             </ColumnDefinition>
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="25*">
+
+            </RowDefinition>
+            <RowDefinition Height="25">
                 
             </RowDefinition>
-            <RowDefinition Height="400">
+            <RowDefinition Height="350">
 
             </RowDefinition>
             <RowDefinition Height="25*">
@@ -27,7 +31,27 @@
             </RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBox Name="orderNumber" Grid.Column="0">Order</TextBox>
-        <TextBox Name="number" Grid.Column="0" Text="Binding Path="
+        <TextBlock Name="orderNumber" Grid.Row="0" Grid.Column="0" TextAlignment="Center">Order</TextBlock>
+        <TextBlock Text="{Binding Path=OrderNumber}" TextAlignment="Left" Grid.Row="0" Grid.Column="1"></TextBlock>
+
+        <TextBlock TextAlignment="Left" Grid.Row="1">Items</TextBlock>
+        <TextBlock TextAlignment="Left" Grid.Row="1" Grid.Column="1">Prices</TextBlock>
+
+        <ListView ItemsSource="{Binding Path=Items}" HorizontalContentAlignment="Stretch" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <TextBlock Text="{Binding}" HorizontalAlignment="Left" Grid.Column="0"></TextBlock>
+                            <TextBlock Text="{Binding Path=Price}" HorizontalAlignment="Right" TextAlignment="Right" Grid.Column="1"></TextBlock>
+                        </DockPanel>
+                        <ListView ItemsSource="{Binding Path=SpecialInstructions}"></ListView>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <TextBlock TextAlignment="Left" VerticalAlignment="Bottom" Grid.Row="4">Subtotal:</TextBlock>
+        <TextBlock Name="subtotal" Text="{Binding Path=Subtotal, StringFormat=c}" VerticalAlignment="Bottom" TextAlignment="Left" Grid.Row="4" Grid.Column="1"></TextBlock>
     </Grid>
 </UserControl>

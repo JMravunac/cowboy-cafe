@@ -25,6 +25,7 @@ namespace PointOfSale
             ItemSelectionButton.Click += ItemSelectionButtonClick;
             CancelOrderButton.Click += CancelOrderButtonClick;
             CompleteOrderButton.Click += CompleteOrderButtonClick;
+            DataContext = new Order();
 
         }
 

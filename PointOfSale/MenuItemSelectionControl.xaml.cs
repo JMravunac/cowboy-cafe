@@ -43,78 +43,138 @@ namespace PointOfSale
 
         private void AddAngryChickenButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new AngryChicken());
+            AngryChicken temp = new AngryChicken();
+            if(DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
 
         private void AddCowpokeChiliButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new CowpokeChili());
+            CowpokeChili temp = new CowpokeChili();
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         private void AddRustlersRibsButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new RustlersRibs());
+            RustlersRibs temp = new RustlersRibs();
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         private void AddPecosPulledPorkButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new PecosPulledPork());
+            PecosPulledPork temp = new PecosPulledPork();
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         private void AddTrailBurgerButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new TrailBurger());
+            TrailBurger temp = new TrailBurger();
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         private void AddDakotaDoubleBurgerButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new DakotaDoubleBurger());
+            DakotaDoubleBurger temp = new DakotaDoubleBurger();
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         private void AddTexasTripleBurgerButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new TexasTripleBurger());
+            TexasTripleBurger temp = new TexasTripleBurger();
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         private void AddChiliCheeseFriesButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new ChiliCheeseFries());
+            ChiliCheeseFries temp = new ChiliCheeseFries();
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         private void AddCordDodgersButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new CornDodgers());
+            CornDodgers temp = new CornDodgers();
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         private void AddPanDeCampoButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new PanDeCampo());
+            PanDeCampo temp = new PanDeCampo();
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         private void AddBakedBeansButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new BakedBeans());
+            BakedBeans temp = new BakedBeans();
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         private void AddJerkedSodaButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new JerkedSoda());
+            JerkedSoda temp = new JerkedSoda();
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         private void AddTexasTeaButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new TexasTea());
+            TexasTea temp = new TexasTea();
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         private void AddCowboyCoffeeButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new CowboyCoffee());
+            CowboyCoffee temp = new CowboyCoffee();
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         private void AddWaterButtonClick(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new Water());
+            Water temp = new Water();
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
     }
 }
