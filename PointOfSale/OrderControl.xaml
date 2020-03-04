@@ -51,7 +51,10 @@
 
 
         <local:OrderSummaryControl x:Name="orderSummary" Grid.Column="3" Grid.RowSpan="2"></local:OrderSummaryControl>
-        <local:MenuItemSelectionControl x:Name="menuSelection" Grid.ColumnSpan="3" Grid.Row="1"></local:MenuItemSelectionControl>
+        <Border Name="Container" Grid.ColumnSpan="3" Grid.Row="1">
+            <local:MenuItemSelectionControl x:Name="menuSelection" ></local:MenuItemSelectionControl>
+        </Border>
+        
 
     </Grid>
 </UserControl>

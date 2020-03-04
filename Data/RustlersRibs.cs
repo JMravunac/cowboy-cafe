@@ -5,6 +5,7 @@
 */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
@@ -12,7 +13,12 @@ namespace CowboyCafe.Data
     /// A class representing the Rustler's ribs entree
     /// </summary>
     public class RustlersRibs : Entree
-    {   
+    {
+
+        /// <summary>
+        /// The property changed event
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         /// The price of the ribs

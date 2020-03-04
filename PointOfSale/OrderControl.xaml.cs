@@ -32,7 +32,7 @@ namespace PointOfSale
 
         private void ItemSelectionButtonClick(object sender, RoutedEventArgs e)
         {
-            
+            Container.Child = new MenuItemSelectionControl();
         }
 
         //Creates a new order on press
@@ -47,5 +47,9 @@ namespace PointOfSale
             this.DataContext = new Order();
         }
 
+        public void SwapScreen(FrameworkElement element)
+        {
+            Container.Child = element;
+        }
     }
 }
