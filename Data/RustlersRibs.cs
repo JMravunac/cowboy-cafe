@@ -12,7 +12,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the Rustler's ribs entree
     /// </summary>
-    public class RustlersRibs : Entree
+    public class RustlersRibs : Entree, INotifyPropertyChanged
     {
 
         /// <summary>

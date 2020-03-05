@@ -12,7 +12,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the Texas Triple Burger entree
     /// </summary>
-    public class TexasTripleBurger : Entree
+    public class TexasTripleBurger : Entree, INotifyPropertyChanged
     {
         /// <summary>
         /// The property changed event

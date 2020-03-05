@@ -12,7 +12,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the Trail Burger entree
     /// </summary>
-    public class TrailBurger : Entree
+    public class TrailBurger : Entree, INotifyPropertyChanged
     {
         /// <summary>
         /// The property changed event

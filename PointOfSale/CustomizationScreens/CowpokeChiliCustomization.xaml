@@ -6,11 +6,40 @@
              xmlns:local="clr-namespace:PointOfSale.CustomizationScreens"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
+    
     <StackPanel>
-        <TextBlock FontSize="40">Custiomize this Chili</TextBlock>
+        <TextBlock FontSize="40">Cowpoke Chili Customization</TextBlock>
         <StackPanel Orientation="Horizontal">
-            <CheckBox IsChecked="{Binding Path=Cheese}"></CheckBox>
-            <TextBlock Text="Cheese"></TextBlock>
+            <CheckBox IsChecked="{Binding Path=Cheese}">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            <TextBlock FontSize="30" Text="Cheese"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <CheckBox IsChecked="{Binding Path=SourCream}">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            <TextBlock FontSize="30" Text="Sour Cream"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <CheckBox IsChecked="{Binding Path=GreenOnions}">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            <TextBlock FontSize="30" Text="Green Onions"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <CheckBox IsChecked="{Binding Path=TortillaStrips}">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            <TextBlock FontSize="30" Text="Tortilla Strips"></TextBlock>
         </StackPanel>
         
     </StackPanel>
