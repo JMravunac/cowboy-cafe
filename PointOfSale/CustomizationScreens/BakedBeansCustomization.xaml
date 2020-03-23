@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
     <StackPanel>
-        <TextBlock FontSize="40" Text="Size:"  Margin="5" />
+        <TextBlock FontSize="40" Text="Baked Beans Size:"  Margin="5" />
         <RadioButton x:Name="TopButton" Margin="5" IsChecked="{Binding Path=SizeSmall}"
      GroupName="First Group" Content="Small">
             <RadioButton.LayoutTransform>

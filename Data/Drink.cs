@@ -5,12 +5,23 @@
 */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public abstract class Drink : IOrderItem 
+    public abstract class Drink : IOrderItem
     {
+
+        /// <summary>
+        /// Gets the size of the side
+        /// </summary>
+        public virtual Size Size { get; set; }
+
+        public virtual bool SizeSmall { get; set; }
+        public virtual bool SizeMedium { get; set; }
+        public virtual bool SizeLarge { get; set; }
+
         /// <summary>
         /// Gets the price of the drink
         /// </summary>
@@ -26,19 +37,6 @@ namespace CowboyCafe.Data
         /// </summary>
         public abstract List<String> SpecialInstructions { get; }
 
-        /// <summary>
-        /// Gets the size of the entree
-        /// </summary>
-        public virtual Size Size { get; set; }
-
-        private bool ice = true;
-        /// <summary>
-        /// If the drink has ice
-        /// </summary>
-        public virtual bool Ice
-        {
-            get { return ice; }
-            set { ice = value; }
-        }
+        
     }
 }
