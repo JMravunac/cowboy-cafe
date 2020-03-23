@@ -5,8 +5,74 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale.CustomizationScreens"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+             d:DesignHeight="450" d:DesignWidth="600">
+    
+        <StackPanel>
+            <TextBlock FontSize="21" Text="Cowboy Coffee Size:"  Margin="5" />
+            <RadioButton x:Name="TopButton" Margin="5" IsChecked="{Binding Path=SizeSmall}"
+     GroupName="First Group" Content="Small">
+                <RadioButton.LayoutTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.LayoutTransform>
+            </RadioButton>
+
+            <RadioButton x:Name="MiddleButton" Margin="5" IsChecked="{Binding Path=SizeMedium}"
+     GroupName="First Group" Content="Medium">
+                <RadioButton.LayoutTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.LayoutTransform>
+            </RadioButton>
+
+            <RadioButton x:Name="LowerButton" Margin="5" IsChecked="{Binding Path=SizeLarge}"
+     GroupName="First Group" Content="Large">
+                <RadioButton.LayoutTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.LayoutTransform>
+            </RadioButton>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox IsChecked="{Binding Path=Ice}">
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+                <TextBlock FontSize="20" Text="Ice"></TextBlock>
+            </StackPanel>
+
             
-    </Grid>
+        <TextBlock FontSize="21" Text="Soda Flavor Size:"  Margin="5" />
+        <RadioButton x:Name="CreamSodaButton" Margin="5" IsChecked="{Binding Path=FlavorCreamSoda}"
+     GroupName="Second Group" Content="Cream Soda">
+            <RadioButton.LayoutTransform>
+                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+            </RadioButton.LayoutTransform>
+        </RadioButton>
+
+        <RadioButton x:Name="BirchBeerButton" Margin="5" IsChecked="{Binding Path=FlavorBirchBeer}"
+     GroupName="Second Group" Content="BirchBeer">
+            <RadioButton.LayoutTransform>
+                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+            </RadioButton.LayoutTransform>
+        </RadioButton>
+
+        <RadioButton x:Name="OrangeSodaButton" Margin="5" IsChecked="{Binding Path=FlavorOrangeSoda}"
+     GroupName="Second Group" Content="Orange Soda">
+            <RadioButton.LayoutTransform>
+                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+            </RadioButton.LayoutTransform>
+        </RadioButton>
+
+        <RadioButton x:Name="SarsparillaButton" Margin="5" IsChecked="{Binding Path=FlavorSarsparilla}"
+     GroupName="Second Group" Content="Sarsparilla">
+            <RadioButton.LayoutTransform>
+                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+            </RadioButton.LayoutTransform>
+        </RadioButton>
+
+        <RadioButton x:Name="RootBeerButton" Margin="5" IsChecked="{Binding Path=FlavorRootBeer}"
+     GroupName="Second Group" Content="Root Beer">
+            <RadioButton.LayoutTransform>
+                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+            </RadioButton.LayoutTransform>
+        </RadioButton>
+    </StackPanel>
 </UserControl>

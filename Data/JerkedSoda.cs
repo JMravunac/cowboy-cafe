@@ -118,15 +118,90 @@ namespace CowboyCafe.Data
             }
         }
 
-        private SodaFlavor flavor;
+        private SodaFlavor flavor = SodaFlavor.BirchBeer;
         /// <summary>
-        /// If the coffee has room for cream
+        /// getter/setter for soda flavor
         /// </summary>
         public SodaFlavor Flavor
         {
-            get { return flavor; }
-            set { flavor = value; }
+            get { return this.flavor; }
+            set { 
+                this.flavor = value;
+
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Flavor"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlavorBirchBeer"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlavorCreamSoda"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlavorOrangeSoda"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlavorSarsparilla"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlavorRootBeer"));
+            }
         }
+
+        /// <summary>
+        /// checks if flavor is birch beer and sets flavor to birch beer
+        /// </summary>
+        public bool FlavorBirchBeer
+        {
+            get { return Flavor == SodaFlavor.BirchBeer; }
+            set
+            {
+                Flavor = SodaFlavor.BirchBeer;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
+        /// <summary>
+        /// checks if flavor is birch beer and sets flavor to birch beer
+        /// </summary>
+        public bool FlavorCreamSoda
+        {
+            get { return Flavor == SodaFlavor.CreamSoda; }
+            set
+            {
+                Flavor = SodaFlavor.CreamSoda;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
+        /// <summary>
+        /// checks if flavor is orange soda and sets flavor to orange soda
+        /// </summary>
+        public bool FlavorOrangeSoda
+        {
+            get { return Flavor == SodaFlavor.OrangeSoda; }
+            set
+            {
+                Flavor = SodaFlavor.OrangeSoda;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
+        /// <summary>
+        /// checks if flavor is sarsparilla and sets flavor to sarsparilla
+        /// </summary>
+        public bool FlavorSarsparilla
+        {
+            get { return Flavor == SodaFlavor.Sarsparilla; }
+            set
+            {
+                Flavor = SodaFlavor.Sarsparilla;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
+        /// <summary>
+        /// checks if flavor is root beer and sets flavor to root beer
+        /// </summary>
+        public bool FlavorRootBeer
+        {
+            get { return Flavor == SodaFlavor.RootBeer; }
+            set
+            {
+                Flavor = SodaFlavor.RootBeer;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
 
         private bool ice = true;
         /// <summary>
