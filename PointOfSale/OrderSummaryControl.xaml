@@ -8,11 +8,14 @@
              d:DesignHeight="450" d:DesignWidth="125">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="4*">
+            <ColumnDefinition Width="3*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="1*">
 
+            </ColumnDefinition>
+            <ColumnDefinition Width="1*">
+                
             </ColumnDefinition>
 
         </Grid.ColumnDefinitions>
@@ -37,13 +40,14 @@
         <TextBlock TextAlignment="Left" Grid.Row="1">Items</TextBlock>
         <TextBlock TextAlignment="Left" Grid.Row="1" Grid.Column="1">Prices</TextBlock>
 
-        <ListView ItemsSource="{Binding Path=Items}" HorizontalContentAlignment="Stretch" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">
+        <ListView ItemsSource="{Binding Path=Items}" Name="OrderList" SelectionChanged="EditItemClick" HorizontalContentAlignment="Stretch" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
                         <DockPanel HorizontalAlignment="Stretch">
-                            <TextBlock Text="{Binding}" HorizontalAlignment="Left" Grid.Column="0"></TextBlock>
-                            <TextBlock Text="{Binding Path=Price}" HorizontalAlignment="Right" TextAlignment="Right" Grid.Column="1"></TextBlock>
+                            <TextBlock Text="{Binding}" Width="120" FontSize="10" HorizontalAlignment="Left" Grid.Column="0"></TextBlock>
+                            <TextBlock Text="{Binding Path=Price}" Width="30" FontSize="10" HorizontalAlignment="Right" TextAlignment="Right" Grid.Column="1"></TextBlock>
+                            <Button x:Name="RemoveButton" Click="RemoveButtonClick" Grid.Column="2" Height="25" Width="25">X</Button>
                         </DockPanel>
                         <ListView ItemsSource="{Binding Path=SpecialInstructions}"></ListView>
                     </StackPanel>

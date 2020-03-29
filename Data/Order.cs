@@ -58,7 +58,7 @@ namespace CowboyCafe.Data
 
         public void Remove(IOrderItem item)
         {
-            items.Add(item);
+            items.Remove(item); //Changed from .Add
             if (item is INotifyPropertyChanged pcitem)
             {
                 pcitem.PropertyChanged -= OnItemChanged;
