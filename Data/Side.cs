@@ -20,6 +20,11 @@ namespace CowboyCafe.Data
         /// </summary>
         public virtual Size Size { get; set; }
 
+        public virtual bool SizeSmall { get; set; }
+        public virtual bool SizeMedium { get; set; }
+        public virtual bool SizeLarge { get; set; }
+
+
         /// <summary>
         /// Gets the price of the side
         /// </summary>
