@@ -10,7 +10,7 @@ namespace CowboyCafe.Data
     /// </summary>
     public class Order : INotifyPropertyChanged
     {
-        private static uint lastOrderNumber = 0;
+        private static uint orderNumber = 1;
 
         //list of each item in the order
         private List<IOrderItem> items = new List<IOrderItem>();
@@ -34,8 +34,17 @@ namespace CowboyCafe.Data
             }
         }
 
+        public double Total
+        {
+            get
+            {
+                double Total = Subtotal * 1.16;
+                return Total;
+            }
+        }
+
         //current order number
-        public static uint OrderNumber { get { return lastOrderNumber++; } }
+        public static uint OrderNumber { get { return orderNumber; } set { orderNumber = value; } }
 
         public IEnumerable<IOrderItem> Items => items.ToArray();
 

@@ -1,4 +1,5 @@
 ﻿using CowboyCafe.Data;
+using PointOfSale.ExtensionMethods;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -38,13 +39,14 @@ namespace PointOfSale
         //Creates a new order on press
         private void CancelOrderButtonClick(object sender, RoutedEventArgs e)
         {
+            Order.OrderNumber++;
             this.DataContext = new Order();
         }
 
         //Finishes the order on press
         private void CompleteOrderButtonClick(object sender, RoutedEventArgs e)
-        {
-            this.DataContext = new Order();
+        {            
+            full.Child = new TransactionControl();
         }
 
         public void SwapScreen(FrameworkElement element)
