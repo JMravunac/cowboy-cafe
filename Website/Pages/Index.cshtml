@@ -7,43 +7,55 @@
 
 <div class="text-center">
     <h1 class="display-4">Cowboy Cafe</h1>
-    <p>We at Cowboy Cafe are proud to bring you authentic trail meals from the American West. 
-    Shake off the dust on your boots and sake your thirst with one of our old-fashioned hand-jerked sodas. 
-    Dip your Pan de Campo into a bowl of beans. Or conquer the the mighty Texas Triple Burger! You’ve had a hard ride - so take it easy with us.</p>
+    <p>
+        We at Cowboy Cafe are proud to bring you authentic trail meals from the American West.
+        Shake off the dust on your boots and sake your thirst with one of our old-fashioned hand-jerked sodas.
+        Dip your Pan de Campo into a bowl of beans. Or conquer the the mighty Texas Triple Burger! You’ve had a hard ride - so take it easy with us.
+    </p>
 </div>
 
 
+<!--Prints all entrees under the entree header-->
 <h2 class="text-left">Entrees</h2>
 <ul class="menu-item">
     @foreach (Entree entree in Menu.Entrees)
     {
         <li>
             <div class="details">
-                <h3>@entree.ToString()</h3>         
-                    <div class="price">
-                        $@entree.Price
-                    </div>
-                    <div class="calories">
-                        Calories:@entree.Calories
-                    </div>
+                <h3>@entree.ToString()</h3>
+                <div class="price">
+                    $@entree.Price
+                </div>
+                <div class="calories">
+                    Calories:@entree.Calories
+                </div>
             </div>
         </li>
     }
 </ul>
 
+<!--Prints all sides under the sides header-->
 <h2 class="text-left">Sides</h2>
 <ul class="menu-item">
     @foreach (Side side in Menu.Sides)
     {
         <li>
             <div class="details">
-                <h3>@side.ToString()</h3>
+                <h3>@side.ToString().Remove(0, 5)</h3>
                 <div class="price">
+                    @side.Size:
                     $@side.Price
                     Calories:@side.Calories
                 </div>
-                @side.Size
+                @{side.Size = Size.Medium;}
                 <div class="price">
+                    @side.Size:
+                    $@side.Price
+                    Calories:@side.Calories
+                </div>
+                @{side.Size = Size.Large;}
+                <div class="price">
+                    @side.Size:
                     $@side.Price
                     Calories:@side.Calories
                 </div>
@@ -52,17 +64,29 @@
     }
 </ul>
 
+<!--Prints all drinks under the drinks header-->
 <h2 class="text-left">Drinks</h2>
 <ul class="menu-item">
     @foreach (Drink drink in Menu.Drinks)
     {
         <li>
             <div class="details">
-                <h3>@drink.ToString()</h3>
+                <h3>@drink.ToString().Remove(0, 5)</h3>
                 <div class="price">
+                    @drink.Size:
                     $@drink.Price
+                    Calories:@drink.Calories
                 </div>
-                <div class="calories">
+                @{drink.Size = Size.Medium;}
+                <div class="price">
+                    @drink.Size:
+                    $@drink.Price
+                    Calories:@drink.Calories
+                </div>
+                @{drink.Size = Size.Large;}
+                <div class="price">
+                    @drink.Size:
+                    $@drink.Price
                     Calories:@drink.Calories
                 </div>
             </div>

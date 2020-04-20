@@ -13,6 +13,11 @@ namespace CowboyCafe.Data
 
         private static List<IOrderItem> drinks = new List<IOrderItem>();
 
+        private static List<IOrderItem> completeMenu = new List<IOrderItem>();
+
+        /// <summary>
+        /// adds all menu items to their respective categories
+        /// </summary>
         static Menu()
         {
             entrees.Add(new AngryChicken());
@@ -32,6 +37,24 @@ namespace CowboyCafe.Data
             drinks.Add(new JerkedSoda());
             drinks.Add(new TexasTea());
             drinks.Add(new Water());
+
+            completeMenu.Add(new AngryChicken());
+            completeMenu.Add(new CowpokeChili());
+            completeMenu.Add(new PecosPulledPork());
+            completeMenu.Add(new RustlersRibs());
+            completeMenu.Add(new TrailBurger());
+            completeMenu.Add(new DakotaDoubleBurger());
+            completeMenu.Add(new TexasTripleBurger());
+
+            completeMenu.Add(new BakedBeans());
+            completeMenu.Add(new ChiliCheeseFries());
+            completeMenu.Add(new CornDodgers());
+            completeMenu.Add(new PanDeCampo());
+
+            completeMenu.Add(new CowboyCoffee());
+            completeMenu.Add(new JerkedSoda());
+            completeMenu.Add(new TexasTea());
+            completeMenu.Add(new Water());
         }
 
         /// <summary>
@@ -48,5 +71,10 @@ namespace CowboyCafe.Data
         /// Gets all the drinks in the menu
         /// </summary>
         public static IEnumerable<IOrderItem> Drinks { get { return drinks; } }
+
+        /// <summary>
+        /// Gets all the items in the menu
+        /// </summary>
+        public static IEnumerable<IOrderItem> CompleteMenu { get { return completeMenu; } }
     }
 }
