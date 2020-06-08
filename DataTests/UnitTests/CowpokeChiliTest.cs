@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Generic;
-using Xunit;
 using CowboyCafe.Data;
+using Xunit;
 
 namespace CowboyCafe.DataTests
 {

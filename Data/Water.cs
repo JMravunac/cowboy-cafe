@@ -1,11 +1,11 @@
 ﻿/*
 * Jack Mravunac
-* Water.cs 
+* Water.cs
 * Class representing water
 */
+
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -50,6 +50,7 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+
         /// <summary>
         /// checks if size is medium and sets size to medium
         /// </summary>
@@ -62,6 +63,7 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+
         /// <summary>
         /// checks if size is large and sets size to large
         /// </summary>
@@ -75,8 +77,6 @@ namespace CowboyCafe.Data
             }
         }
 
-
-
         /// <summary>
         /// The calories in the water
         /// </summary>
@@ -88,15 +88,16 @@ namespace CowboyCafe.Data
                 {
                     case Size.Large:
                         return 0;
+
                     case Size.Medium:
                         return 0;
+
                     case Size.Small:
                         return 0;
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
-
             }
         }
 
@@ -111,26 +112,29 @@ namespace CowboyCafe.Data
                 {
                     case Size.Large:
                         return 0.12;
+
                     case Size.Medium:
                         return 0.12;
+
                     case Size.Small:
                         return 0.12;
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
-
             }
         }
 
         private bool lemon = false;
+
         /// <summary>
         /// If the water has lemon
         /// </summary>
         public bool Lemon
         {
             get { return lemon; }
-            set { 
+            set
+            {
                 lemon = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lemon"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -138,6 +142,7 @@ namespace CowboyCafe.Data
         }
 
         private bool ice = true;
+
         /// <summary>
         /// If the drink has ice
         /// </summary>
@@ -174,15 +179,16 @@ namespace CowboyCafe.Data
             {
                 case Size.Large:
                     return "Large Water";
+
                 case Size.Medium:
                     return "Medium Water";
+
                 case Size.Small:
                     return "Small Water";
+
                 default:
                     throw new NotImplementedException("Unknown size");
-
             }
         }
-
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -26,7 +24,7 @@ namespace CowboyCafe.Data
             get
             {
                 double subTotal = 0.0;
-                foreach(IOrderItem item in items)
+                foreach (IOrderItem item in items)
                 {
                     subTotal += item.Price;
                 }
@@ -58,7 +56,6 @@ namespace CowboyCafe.Data
             if (item is INotifyPropertyChanged pcitem)
             {
                 pcitem.PropertyChanged += OnItemChanged; // remove if statement and change pcitem back to item
-
             }
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
@@ -71,7 +68,6 @@ namespace CowboyCafe.Data
             if (item is INotifyPropertyChanged pcitem)
             {
                 pcitem.PropertyChanged -= OnItemChanged;
-
             }
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
@@ -81,7 +77,7 @@ namespace CowboyCafe.Data
         private void OnItemChanged(object sender, PropertyChangedEventArgs e)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
-            if(e.PropertyName == "Price") PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+            if (e.PropertyName == "Price") PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
         }
     }
 }

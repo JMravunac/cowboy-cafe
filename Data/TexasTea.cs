@@ -1,11 +1,11 @@
 ﻿/*
 * Jack Mravunac
-* TexasTea.cs 
+* TexasTea.cs
 * Class representing Texas Tea
 */
+
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -50,6 +50,7 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+
         /// <summary>
         /// checks if size is medium and sets size to medium
         /// </summary>
@@ -62,6 +63,7 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+
         /// <summary>
         /// checks if size is large and sets size to large
         /// </summary>
@@ -74,8 +76,6 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
-
-
 
         /// <summary>
         /// The calories in the tea
@@ -90,13 +90,15 @@ namespace CowboyCafe.Data
                     {
                         case Size.Large:
                             return 36;
+
                         case Size.Medium:
                             return 22;
+
                         case Size.Small:
                             return 10;
+
                         default:
                             throw new NotImplementedException("Unknown size");
-
                     }
                 }
                 else
@@ -105,16 +107,17 @@ namespace CowboyCafe.Data
                     {
                         case Size.Large:
                             return 18;
+
                         case Size.Medium:
                             return 11;
+
                         case Size.Small:
                             return 5;
+
                         default:
                             throw new NotImplementedException("Unknown size");
-
                     }
                 }
-
             }
         }
 
@@ -129,39 +132,45 @@ namespace CowboyCafe.Data
                 {
                     case Size.Large:
                         return 2.00;
+
                     case Size.Medium:
                         return 1.50;
+
                     case Size.Small:
                         return 1.00;
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
-
             }
         }
 
         private bool lemon = false;
+
         /// <summary>
         /// If the tea has lemon
         /// </summary>
         public bool Lemon
         {
             get { return lemon; }
-            set { lemon = value;
+            set
+            {
+                lemon = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lemon"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
         }
 
         private bool sweet = true;
+
         /// <summary>
         /// If the tea has lemon
         /// </summary>
         public bool Sweet
         {
             get { return sweet; }
-            set { 
+            set
+            {
                 sweet = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sweet"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -169,6 +178,7 @@ namespace CowboyCafe.Data
         }
 
         private bool ice = true;
+
         /// <summary>
         /// If the drink has ice
         /// </summary>
@@ -201,19 +211,21 @@ namespace CowboyCafe.Data
 
         public override string ToString()
         {
-            if(Sweet)
+            if (Sweet)
             {
                 switch (Size)
                 {
                     case Size.Large:
                         return "Large Texas Sweet Tea";
+
                     case Size.Medium:
                         return "Medium Texas Sweet Tea";
+
                     case Size.Small:
                         return "Small Texas Sweet Tea";
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
             }
             else
@@ -222,16 +234,17 @@ namespace CowboyCafe.Data
                 {
                     case Size.Large:
                         return "Large Texas Plain Tea";
+
                     case Size.Medium:
                         return "Medium Texas Plain Tea";
+
                     case Size.Small:
                         return "Small Texas Plain Tea";
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
             }
-            
         }
     }
 }

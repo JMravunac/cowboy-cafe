@@ -1,13 +1,11 @@
 ﻿/* Jack Mravunac
  * PropertyChangedTests.cs
- * Contains test for all menu items to check that all items implement propertychanged and they change when they need to 
+ * Contains test for all menu items to check that all items implement propertychanged and they change when they need to
  */
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
+
 using CowboyCafe.Data;
 using System.ComponentModel;
+using Xunit;
 
 namespace CowboyCafe.DataTests
 {
@@ -26,7 +24,7 @@ namespace CowboyCafe.DataTests
             var chili = new CowpokeChili();
             Assert.IsAssignableFrom<INotifyPropertyChanged>(chili);
         }
-        
+
         [Fact]
         public void RustlersRibsImplementsINotifyPropertyChanged()
         {
@@ -122,15 +120,18 @@ namespace CowboyCafe.DataTests
         public void AngryChickenChangingBreadPropertyShouldInvokePropertyChangedForBread()
         {
             var chicken = new AngryChicken();
-            Assert.PropertyChanged(chicken, "Bread", () => {
+            Assert.PropertyChanged(chicken, "Bread", () =>
+            {
                 chicken.Bread = false;
             });
         }
+
         [Fact]
         public void AngryChickenChangingBreadPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var chicken = new AngryChicken();
-            Assert.PropertyChanged(chicken, "SpecialInstructions", () => {
+            Assert.PropertyChanged(chicken, "SpecialInstructions", () =>
+            {
                 chicken.Bread = false;
             });
         }
@@ -139,15 +140,18 @@ namespace CowboyCafe.DataTests
         public void AngryChickenChangingPicklePropertyShouldInvokePropertyChangedForPickle()
         {
             var chicken = new AngryChicken();
-            Assert.PropertyChanged(chicken, "Pickle", () => {
+            Assert.PropertyChanged(chicken, "Pickle", () =>
+            {
                 chicken.Pickle = false;
             });
         }
+
         [Fact]
         public void AngryChickenChangingPicklePropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var chicken = new AngryChicken();
-            Assert.PropertyChanged(chicken, "SpecialInstructions", () => {
+            Assert.PropertyChanged(chicken, "SpecialInstructions", () =>
+            {
                 chicken.Pickle = false;
             });
         }
@@ -156,15 +160,18 @@ namespace CowboyCafe.DataTests
         public void CowpokeChiliChangingCheesePropertyShouldInvokePropertyChangedForCheese()
         {
             var chili = new CowpokeChili();
-            Assert.PropertyChanged(chili, "Cheese", () => {
+            Assert.PropertyChanged(chili, "Cheese", () =>
+            {
                 chili.Cheese = false;
             });
         }
+
         [Fact]
         public void CowpokeChiliChangingCheesePropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var chili = new CowpokeChili();
-            Assert.PropertyChanged(chili, "SpecialInstructions", () => {
+            Assert.PropertyChanged(chili, "SpecialInstructions", () =>
+            {
                 chili.Cheese = false;
             });
         }
@@ -173,15 +180,18 @@ namespace CowboyCafe.DataTests
         public void CowpokeChiliChangingSourCreamPropertyShouldInvokePropertyChangedForSourCream()
         {
             var chili = new CowpokeChili();
-            Assert.PropertyChanged(chili, "SourCream", () => {
+            Assert.PropertyChanged(chili, "SourCream", () =>
+            {
                 chili.SourCream = false;
             });
         }
+
         [Fact]
         public void CowpokeChiliChangingSourCreamPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var chili = new CowpokeChili();
-            Assert.PropertyChanged(chili, "SpecialInstructions", () => {
+            Assert.PropertyChanged(chili, "SpecialInstructions", () =>
+            {
                 chili.SourCream = false;
             });
         }
@@ -190,15 +200,18 @@ namespace CowboyCafe.DataTests
         public void CowpokeChiliChangingGreenOnionsPropertyShouldInvokePropertyChangedForGreenOnions()
         {
             var chili = new CowpokeChili();
-            Assert.PropertyChanged(chili, "GreenOnions", () => {
+            Assert.PropertyChanged(chili, "GreenOnions", () =>
+            {
                 chili.GreenOnions = false;
             });
         }
+
         [Fact]
         public void CowpokeChiliChangingGreenOnionsPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var chili = new CowpokeChili();
-            Assert.PropertyChanged(chili, "SpecialInstructions", () => {
+            Assert.PropertyChanged(chili, "SpecialInstructions", () =>
+            {
                 chili.GreenOnions = false;
             });
         }
@@ -207,15 +220,18 @@ namespace CowboyCafe.DataTests
         public void CowpokeChiliChangingTortillaStripsPropertyShouldInvokePropertyChangedForTortillaStrips()
         {
             var chili = new CowpokeChili();
-            Assert.PropertyChanged(chili, "TortillaStrips", () => {
+            Assert.PropertyChanged(chili, "TortillaStrips", () =>
+            {
                 chili.TortillaStrips = false;
             });
         }
+
         [Fact]
         public void CowpokeChiliChangingTortillaPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var chili = new CowpokeChili();
-            Assert.PropertyChanged(chili, "SpecialInstructions", () => {
+            Assert.PropertyChanged(chili, "SpecialInstructions", () =>
+            {
                 chili.TortillaStrips = false;
             });
         }
@@ -224,15 +240,18 @@ namespace CowboyCafe.DataTests
         public void PecosPulledPorkChangingBreadPropertyShouldInvokePropertyChangedForBread()
         {
             var pork = new PecosPulledPork();
-            Assert.PropertyChanged(pork, "Bread", () => {
+            Assert.PropertyChanged(pork, "Bread", () =>
+            {
                 pork.Bread = false;
             });
         }
+
         [Fact]
         public void PecosPulledPorkChangingBreadPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var pork = new PecosPulledPork();
-            Assert.PropertyChanged(pork, "SpecialInstructions", () => {
+            Assert.PropertyChanged(pork, "SpecialInstructions", () =>
+            {
                 pork.Bread = false;
             });
         }
@@ -241,15 +260,18 @@ namespace CowboyCafe.DataTests
         public void PecosPulledPorkChangingPicklePropertyShouldInvokePropertyChangedForPickle()
         {
             var pork = new PecosPulledPork();
-            Assert.PropertyChanged(pork, "Pickle", () => {
+            Assert.PropertyChanged(pork, "Pickle", () =>
+            {
                 pork.Pickle = false;
             });
         }
+
         [Fact]
         public void PecosPulledPorkChangingPicklePropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var pork = new PecosPulledPork();
-            Assert.PropertyChanged(pork, "SpecialInstructions", () => {
+            Assert.PropertyChanged(pork, "SpecialInstructions", () =>
+            {
                 pork.Pickle = false;
             });
         }
@@ -258,15 +280,18 @@ namespace CowboyCafe.DataTests
         public void TrailBurgerChangingBunPropertyShouldInvokePropertyChangedForBun()
         {
             var burger = new TrailBurger();
-            Assert.PropertyChanged(burger, "Bun", () => {
+            Assert.PropertyChanged(burger, "Bun", () =>
+            {
                 burger.Bun = false;
             });
         }
+
         [Fact]
         public void TrailBurgerChangingBunPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TrailBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Bun = false;
             });
         }
@@ -275,15 +300,18 @@ namespace CowboyCafe.DataTests
         public void TrailBurgerChangingCheesePropertyShouldInvokePropertyChangedForCheese()
         {
             var burger = new TrailBurger();
-            Assert.PropertyChanged(burger, "Cheese", () => {
+            Assert.PropertyChanged(burger, "Cheese", () =>
+            {
                 burger.Cheese = false;
             });
         }
+
         [Fact]
         public void TrailBurgerChangingCheesePropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TrailBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Cheese = false;
             });
         }
@@ -292,15 +320,18 @@ namespace CowboyCafe.DataTests
         public void TrailBurgerChangingKetchupPropertyShouldInvokePropertyChangedForKetchup()
         {
             var burger = new TrailBurger();
-            Assert.PropertyChanged(burger, "Ketchup", () => {
+            Assert.PropertyChanged(burger, "Ketchup", () =>
+            {
                 burger.Ketchup = false;
             });
         }
+
         [Fact]
         public void TrailBurgerChangingKetchupPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TrailBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Ketchup = false;
             });
         }
@@ -309,15 +340,18 @@ namespace CowboyCafe.DataTests
         public void TrailBurgerChangingMustardPropertyShouldInvokePropertyChangedForMustard()
         {
             var burger = new TrailBurger();
-            Assert.PropertyChanged(burger, "Mustard", () => {
+            Assert.PropertyChanged(burger, "Mustard", () =>
+            {
                 burger.Mustard = false;
             });
         }
+
         [Fact]
         public void TrailBurgerChangingMustardPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TrailBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Mustard = false;
             });
         }
@@ -326,15 +360,18 @@ namespace CowboyCafe.DataTests
         public void TrailBurgerChangingPicklePropertyShouldInvokePropertyChangedForPickle()
         {
             var burger = new TrailBurger();
-            Assert.PropertyChanged(burger, "Pickle", () => {
+            Assert.PropertyChanged(burger, "Pickle", () =>
+            {
                 burger.Pickle = false;
             });
         }
+
         [Fact]
         public void TrailBurgerChangingPicklePropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TrailBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Pickle = false;
             });
         }
@@ -343,15 +380,18 @@ namespace CowboyCafe.DataTests
         public void DakotaDoubleBurgerChangingBunPropertyShouldInvokePropertyChangedForBun()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "Bun", () => {
+            Assert.PropertyChanged(burger, "Bun", () =>
+            {
                 burger.Bun = false;
             });
         }
+
         [Fact]
         public void DakotaDoubleBurgerChangingBunPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Bun = false;
             });
         }
@@ -360,15 +400,18 @@ namespace CowboyCafe.DataTests
         public void DakotaDoubleBurgerChangingCheesePropertyShouldInvokePropertyChangedForCheese()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "Cheese", () => {
+            Assert.PropertyChanged(burger, "Cheese", () =>
+            {
                 burger.Cheese = false;
             });
         }
+
         [Fact]
         public void DakotaDoubleBurgerChangingCheesePropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Cheese = false;
             });
         }
@@ -377,15 +420,18 @@ namespace CowboyCafe.DataTests
         public void DakotaDoubleBurgerChangingKetchupPropertyShouldInvokePropertyChangedForKetchup()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "Ketchup", () => {
+            Assert.PropertyChanged(burger, "Ketchup", () =>
+            {
                 burger.Ketchup = false;
             });
         }
+
         [Fact]
         public void DakotaDoubleBurgerChangingKetchupPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Ketchup = false;
             });
         }
@@ -394,15 +440,18 @@ namespace CowboyCafe.DataTests
         public void DakotaDoubleBurgerChangingMustardPropertyShouldInvokePropertyChangedForMustard()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "Mustard", () => {
+            Assert.PropertyChanged(burger, "Mustard", () =>
+            {
                 burger.Mustard = false;
             });
         }
+
         [Fact]
         public void DakotaDoubleBurgerChangingMustardPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Mustard = false;
             });
         }
@@ -411,15 +460,18 @@ namespace CowboyCafe.DataTests
         public void DakotaDoubleBurgerChangingPicklePropertyShouldInvokePropertyChangedForPickle()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "Pickle", () => {
+            Assert.PropertyChanged(burger, "Pickle", () =>
+            {
                 burger.Pickle = false;
             });
         }
+
         [Fact]
         public void DakotaDoubleBurgerChangingPicklePropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Pickle = false;
             });
         }
@@ -428,15 +480,18 @@ namespace CowboyCafe.DataTests
         public void DakotaDoubleBurgerChangingTomatoPropertyShouldInvokePropertyChangedForTomato()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "Tomato", () => {
+            Assert.PropertyChanged(burger, "Tomato", () =>
+            {
                 burger.Tomato = false;
             });
         }
+
         [Fact]
         public void DakotaDoubleBurgerChangingTomatoPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Tomato = false;
             });
         }
@@ -445,15 +500,18 @@ namespace CowboyCafe.DataTests
         public void DakotaDoubleBurgerChangingLettucePropertyShouldInvokePropertyChangedForLettuce()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "Lettuce", () => {
+            Assert.PropertyChanged(burger, "Lettuce", () =>
+            {
                 burger.Lettuce = false;
             });
         }
+
         [Fact]
         public void DakotaDoubleBurgerChangingLettucePropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Lettuce = false;
             });
         }
@@ -462,15 +520,18 @@ namespace CowboyCafe.DataTests
         public void DakotaDoubleBurgerChangingMayoPropertyShouldInvokePropertyChangedForMayo()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "Mayo", () => {
+            Assert.PropertyChanged(burger, "Mayo", () =>
+            {
                 burger.Mayo = false;
             });
         }
+
         [Fact]
         public void DakotaDoubleBurgerChangingMayoPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new DakotaDoubleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Mayo = false;
             });
         }
@@ -479,15 +540,18 @@ namespace CowboyCafe.DataTests
         public void TexasTripleBurgerChangingBunPropertyShouldInvokePropertyChangedForBun()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "Bun", () => {
+            Assert.PropertyChanged(burger, "Bun", () =>
+            {
                 burger.Bun = false;
             });
         }
+
         [Fact]
         public void TexasTripleBurgerChangingBunPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Bun = false;
             });
         }
@@ -496,15 +560,18 @@ namespace CowboyCafe.DataTests
         public void TexasTripleBurgerChangingCheesePropertyShouldInvokePropertyChangedForCheese()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "Cheese", () => {
+            Assert.PropertyChanged(burger, "Cheese", () =>
+            {
                 burger.Cheese = false;
             });
         }
+
         [Fact]
         public void TexasTripleBurgerChangingCheesePropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Cheese = false;
             });
         }
@@ -513,15 +580,18 @@ namespace CowboyCafe.DataTests
         public void TexasTripleBurgerChangingKetchupPropertyShouldInvokePropertyChangedForKetchup()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "Ketchup", () => {
+            Assert.PropertyChanged(burger, "Ketchup", () =>
+            {
                 burger.Ketchup = false;
             });
         }
+
         [Fact]
         public void TexasTripleBurgerChangingKetchupPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Ketchup = false;
             });
         }
@@ -530,15 +600,18 @@ namespace CowboyCafe.DataTests
         public void TexasTripleBurgerChangingMustardPropertyShouldInvokePropertyChangedForMustard()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "Mustard", () => {
+            Assert.PropertyChanged(burger, "Mustard", () =>
+            {
                 burger.Mustard = false;
             });
         }
+
         [Fact]
         public void TexasTripleBurgerChangingMustardPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Mustard = false;
             });
         }
@@ -547,15 +620,18 @@ namespace CowboyCafe.DataTests
         public void TexasTripleBurgerChangingPicklePropertyShouldInvokePropertyChangedForPickle()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "Pickle", () => {
+            Assert.PropertyChanged(burger, "Pickle", () =>
+            {
                 burger.Pickle = false;
             });
         }
+
         [Fact]
         public void TexasTripleBurgerChangingPicklePropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Pickle = false;
             });
         }
@@ -564,15 +640,18 @@ namespace CowboyCafe.DataTests
         public void TexasTripleBurgerChangingTomatoPropertyShouldInvokePropertyChangedForTomato()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "Tomato", () => {
+            Assert.PropertyChanged(burger, "Tomato", () =>
+            {
                 burger.Tomato = false;
             });
         }
+
         [Fact]
         public void TexasTripleBurgerChangingTomatoPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Tomato = false;
             });
         }
@@ -581,15 +660,18 @@ namespace CowboyCafe.DataTests
         public void TexasTripleBurgerChangingLettucePropertyShouldInvokePropertyChangedForLettuce()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "Lettuce", () => {
+            Assert.PropertyChanged(burger, "Lettuce", () =>
+            {
                 burger.Lettuce = false;
             });
         }
+
         [Fact]
         public void TexasTripleBurgerChangingLettucePropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Lettuce = false;
             });
         }
@@ -598,15 +680,18 @@ namespace CowboyCafe.DataTests
         public void TexasTripleBurgerChangingMayoPropertyShouldInvokePropertyChangedForMayo()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "Mayo", () => {
+            Assert.PropertyChanged(burger, "Mayo", () =>
+            {
                 burger.Mayo = false;
             });
         }
+
         [Fact]
         public void TexasTripleBurgerChangingMayoPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Mayo = false;
             });
         }
@@ -615,15 +700,18 @@ namespace CowboyCafe.DataTests
         public void TexasTripleBurgerChangingBaconPropertyShouldInvokePropertyChangedForBacon()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "Bacon", () => {
+            Assert.PropertyChanged(burger, "Bacon", () =>
+            {
                 burger.Bacon = false;
             });
         }
+
         [Fact]
         public void TexasTripleBurgerChangingBaconPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Bacon = false;
             });
         }
@@ -632,15 +720,18 @@ namespace CowboyCafe.DataTests
         public void TexasTripleBurgerChangingEggPropertyShouldInvokePropertyChangedForEgg()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "Egg", () => {
+            Assert.PropertyChanged(burger, "Egg", () =>
+            {
                 burger.Egg = false;
             });
         }
+
         [Fact]
         public void TexasTripleBurgerChangingEggPropertyShouldInvokePropertyChangedForSpecialInstructions()
         {
             var burger = new TexasTripleBurger();
-            Assert.PropertyChanged(burger, "SpecialInstructions", () => {
+            Assert.PropertyChanged(burger, "SpecialInstructions", () =>
+            {
                 burger.Egg = false;
             });
         }
@@ -649,7 +740,8 @@ namespace CowboyCafe.DataTests
         public void ChiliCheeseFriesChangingSizeShouldInvokePropertyChangedForSize()
         {
             var fries = new ChiliCheeseFries();
-            Assert.PropertyChanged(fries, "Size", () =>{
+            Assert.PropertyChanged(fries, "Size", () =>
+            {
                 fries.Size = Size.Medium;
             });
         }
@@ -658,7 +750,8 @@ namespace CowboyCafe.DataTests
         public void ChiliCheeseFriesChangingSizeShouldInvokePropertyChangedForPrice()
         {
             var fries = new ChiliCheeseFries();
-            Assert.PropertyChanged(fries, "Price", () => {
+            Assert.PropertyChanged(fries, "Price", () =>
+            {
                 fries.Size = Size.Medium;
             });
         }
@@ -667,7 +760,8 @@ namespace CowboyCafe.DataTests
         public void ChiliCheeseFriesChangingSizeShouldInvokePropertyChangedForSpecialInstructions()
         {
             var fries = new ChiliCheeseFries();
-            Assert.PropertyChanged(fries, "SpecialInstructions", () => {
+            Assert.PropertyChanged(fries, "SpecialInstructions", () =>
+            {
                 fries.Size = Size.Medium;
             });
         }
@@ -676,7 +770,8 @@ namespace CowboyCafe.DataTests
         public void CornDodgersChangingSizeShouldInvokePropertyChangedForSize()
         {
             var dodgers = new CornDodgers();
-            Assert.PropertyChanged(dodgers, "Size", () => {
+            Assert.PropertyChanged(dodgers, "Size", () =>
+            {
                 dodgers.Size = Size.Medium;
             });
         }
@@ -685,7 +780,8 @@ namespace CowboyCafe.DataTests
         public void CornDodgersChangingSizeShouldInvokePropertyChangedForPrice()
         {
             var dodgers = new CornDodgers();
-            Assert.PropertyChanged(dodgers, "Price", () => {
+            Assert.PropertyChanged(dodgers, "Price", () =>
+            {
                 dodgers.Size = Size.Medium;
             });
         }
@@ -694,7 +790,8 @@ namespace CowboyCafe.DataTests
         public void CornDodgersChangingSizeShouldInvokePropertyChangedForSpecialInstructions()
         {
             var dodgers = new CornDodgers();
-            Assert.PropertyChanged(dodgers, "SpecialInstructions", () => {
+            Assert.PropertyChanged(dodgers, "SpecialInstructions", () =>
+            {
                 dodgers.Size = Size.Medium;
             });
         }
@@ -703,7 +800,8 @@ namespace CowboyCafe.DataTests
         public void PanDeCampoChangingSizeShouldInvokePropertyChangedForSize()
         {
             var campo = new PanDeCampo();
-            Assert.PropertyChanged(campo, "Size", () => {
+            Assert.PropertyChanged(campo, "Size", () =>
+            {
                 campo.Size = Size.Medium;
             });
         }
@@ -712,7 +810,8 @@ namespace CowboyCafe.DataTests
         public void PanDeCampoChangingSizeShouldInvokePropertyChangedForPrice()
         {
             var campo = new PanDeCampo();
-            Assert.PropertyChanged(campo, "Price", () => {
+            Assert.PropertyChanged(campo, "Price", () =>
+            {
                 campo.Size = Size.Medium;
             });
         }
@@ -721,7 +820,8 @@ namespace CowboyCafe.DataTests
         public void PanDeCampoChangingSizeShouldInvokePropertyChangedForSpecialInstructions()
         {
             var campo = new PanDeCampo();
-            Assert.PropertyChanged(campo, "SpecialInstructions", () => {
+            Assert.PropertyChanged(campo, "SpecialInstructions", () =>
+            {
                 campo.Size = Size.Medium;
             });
         }
@@ -730,7 +830,8 @@ namespace CowboyCafe.DataTests
         public void BakedBeansChangingSizeShouldInvokePropertyChangedForSize()
         {
             var beans = new BakedBeans();
-            Assert.PropertyChanged(beans, "Size", () => {
+            Assert.PropertyChanged(beans, "Size", () =>
+            {
                 beans.Size = Size.Medium;
             });
         }
@@ -739,7 +840,8 @@ namespace CowboyCafe.DataTests
         public void BakedBeansChangingSizeShouldInvokePropertyChangedForPrice()
         {
             var beans = new BakedBeans();
-            Assert.PropertyChanged(beans, "Price", () => {
+            Assert.PropertyChanged(beans, "Price", () =>
+            {
                 beans.Size = Size.Medium;
             });
         }
@@ -748,7 +850,8 @@ namespace CowboyCafe.DataTests
         public void BakedBeansChangingSizeShouldInvokePropertyChangedForSpecialInstructions()
         {
             var beans = new BakedBeans();
-            Assert.PropertyChanged(beans, "SpecialInstructions", () => {
+            Assert.PropertyChanged(beans, "SpecialInstructions", () =>
+            {
                 beans.Size = Size.Medium;
             });
         }
@@ -756,8 +859,9 @@ namespace CowboyCafe.DataTests
         [Fact]
         public void JerkedSodaChangingSizeShouldInvokePropertyChangedForSize()
         {
-            var soda= new JerkedSoda();
-            Assert.PropertyChanged(soda, "Size", () => {
+            var soda = new JerkedSoda();
+            Assert.PropertyChanged(soda, "Size", () =>
+            {
                 soda.Size = Size.Medium;
             });
         }
@@ -766,7 +870,8 @@ namespace CowboyCafe.DataTests
         public void JerkedSodaChangingSizeShouldInvokePropertyChangedForPrice()
         {
             var soda = new JerkedSoda();
-            Assert.PropertyChanged(soda, "Price", () => {
+            Assert.PropertyChanged(soda, "Price", () =>
+            {
                 soda.Size = Size.Medium;
             });
         }
@@ -775,7 +880,8 @@ namespace CowboyCafe.DataTests
         public void JerkedSodaChangingSizeShouldInvokePropertyChangedForSpecialInstructions()
         {
             var soda = new JerkedSoda();
-            Assert.PropertyChanged(soda, "SpecialInstructions", () => {
+            Assert.PropertyChanged(soda, "SpecialInstructions", () =>
+            {
                 soda.Size = Size.Medium;
             });
         }
@@ -784,7 +890,8 @@ namespace CowboyCafe.DataTests
         public void JerkedSodaChangingFlavorShouldInvokePropertyChangedForFlavor()
         {
             var soda = new JerkedSoda();
-            Assert.PropertyChanged(soda, "Flavor", () => {
+            Assert.PropertyChanged(soda, "Flavor", () =>
+            {
                 soda.Flavor = SodaFlavor.OrangeSoda;
             });
         }
@@ -793,7 +900,8 @@ namespace CowboyCafe.DataTests
         public void JerkedSodaChangingFlavorShouldInvokePropertyChangedForPrice()
         {
             var soda = new JerkedSoda();
-            Assert.PropertyChanged(soda, "Price", () => {
+            Assert.PropertyChanged(soda, "Price", () =>
+            {
                 soda.Flavor = SodaFlavor.OrangeSoda;
             });
         }
@@ -802,7 +910,8 @@ namespace CowboyCafe.DataTests
         public void JerkedSodaChangingFlavorShouldInvokePropertyChangedForSpecialInstructions()
         {
             var soda = new JerkedSoda();
-            Assert.PropertyChanged(soda, "SpecialInstructions", () => {
+            Assert.PropertyChanged(soda, "SpecialInstructions", () =>
+            {
                 soda.Flavor = SodaFlavor.OrangeSoda;
             });
         }
@@ -811,7 +920,8 @@ namespace CowboyCafe.DataTests
         public void JerkedSodaChangingIceShouldInvokePropertyChangedForIce()
         {
             var soda = new JerkedSoda();
-            Assert.PropertyChanged(soda, "Ice", () => {
+            Assert.PropertyChanged(soda, "Ice", () =>
+            {
                 soda.Ice = false;
             });
         }
@@ -820,7 +930,8 @@ namespace CowboyCafe.DataTests
         public void JerkedSodaChangingIceShouldInvokePropertyChangedForSpecialInstructions()
         {
             var soda = new JerkedSoda();
-            Assert.PropertyChanged(soda, "SpecialInstructions", () => {
+            Assert.PropertyChanged(soda, "SpecialInstructions", () =>
+            {
                 soda.Ice = false;
             });
         }
@@ -829,7 +940,8 @@ namespace CowboyCafe.DataTests
         public void CowboyCoffeeChangingSizeShouldInvokePropertyChangedForSize()
         {
             var coffee = new CowboyCoffee();
-            Assert.PropertyChanged(coffee, "Size", () => {
+            Assert.PropertyChanged(coffee, "Size", () =>
+            {
                 coffee.Size = Size.Medium;
             });
         }
@@ -838,7 +950,8 @@ namespace CowboyCafe.DataTests
         public void CowboyCoffeeChangingSizeShouldInvokePropertyChangedForPrice()
         {
             var coffee = new CowboyCoffee();
-            Assert.PropertyChanged(coffee, "Price", () => {
+            Assert.PropertyChanged(coffee, "Price", () =>
+            {
                 coffee.Size = Size.Medium;
             });
         }
@@ -847,7 +960,8 @@ namespace CowboyCafe.DataTests
         public void CowboyCoffeeChangingSizeShouldInvokePropertyChangedForSpecialInstructions()
         {
             var coffee = new CowboyCoffee();
-            Assert.PropertyChanged(coffee, "SpecialInstructions", () => {
+            Assert.PropertyChanged(coffee, "SpecialInstructions", () =>
+            {
                 coffee.Size = Size.Medium;
             });
         }
@@ -856,7 +970,8 @@ namespace CowboyCafe.DataTests
         public void CowboyCoffeeChangingRoomForCreamShouldInvokePropertyChangedForRoomForCream()
         {
             var coffee = new CowboyCoffee();
-            Assert.PropertyChanged(coffee, "RoomForCream", () => {
+            Assert.PropertyChanged(coffee, "RoomForCream", () =>
+            {
                 coffee.RoomForCream = true;
             });
         }
@@ -865,7 +980,8 @@ namespace CowboyCafe.DataTests
         public void CowboyCoffeeChangingRoomForCreamShouldInvokePropertyChangedForSpecialInstructions()
         {
             var coffee = new CowboyCoffee();
-            Assert.PropertyChanged(coffee, "SpecialInstructions", () => {
+            Assert.PropertyChanged(coffee, "SpecialInstructions", () =>
+            {
                 coffee.RoomForCream = true;
             });
         }
@@ -874,7 +990,8 @@ namespace CowboyCafe.DataTests
         public void CowboyCoffeeChangingDecafShouldInvokePropertyChangedForDecaf()
         {
             var coffee = new CowboyCoffee();
-            Assert.PropertyChanged(coffee, "Decaf", () => {
+            Assert.PropertyChanged(coffee, "Decaf", () =>
+            {
                 coffee.Decaf = true;
             });
         }
@@ -883,7 +1000,8 @@ namespace CowboyCafe.DataTests
         public void CowboyCoffeeChangingDecafShouldInvokePropertyChangedForSpecialInstructions()
         {
             var coffee = new CowboyCoffee();
-            Assert.PropertyChanged(coffee, "SpecialInstructions", () => {
+            Assert.PropertyChanged(coffee, "SpecialInstructions", () =>
+            {
                 coffee.Decaf = true;
             });
         }
@@ -892,7 +1010,8 @@ namespace CowboyCafe.DataTests
         public void CowboyCoffeeChangingIceShouldInvokePropertyChangedForIce()
         {
             var coffee = new CowboyCoffee();
-            Assert.PropertyChanged(coffee, "Ice", () => {
+            Assert.PropertyChanged(coffee, "Ice", () =>
+            {
                 coffee.Ice = true;
             });
         }
@@ -901,7 +1020,8 @@ namespace CowboyCafe.DataTests
         public void CowboyCoffeeChangingIceShouldInvokePropertyChangedForSpecialInstructions()
         {
             var coffee = new CowboyCoffee();
-            Assert.PropertyChanged(coffee, "SpecialInstructions", () => {
+            Assert.PropertyChanged(coffee, "SpecialInstructions", () =>
+            {
                 coffee.Ice = true;
             });
         }
@@ -910,7 +1030,8 @@ namespace CowboyCafe.DataTests
         public void TexasTeaChangingSizeShouldInvokePropertyChangedForSize()
         {
             var tea = new TexasTea();
-            Assert.PropertyChanged(tea, "Size", () => {
+            Assert.PropertyChanged(tea, "Size", () =>
+            {
                 tea.Size = Size.Medium;
             });
         }
@@ -919,7 +1040,8 @@ namespace CowboyCafe.DataTests
         public void TexasTeaChangingSizeShouldInvokePropertyChangedForPrice()
         {
             var tea = new TexasTea();
-            Assert.PropertyChanged(tea, "Price", () => {
+            Assert.PropertyChanged(tea, "Price", () =>
+            {
                 tea.Size = Size.Medium;
             });
         }
@@ -928,7 +1050,8 @@ namespace CowboyCafe.DataTests
         public void TexasTeaChangingSizeShouldInvokePropertyChangedForSpecialInstructions()
         {
             var tea = new TexasTea();
-            Assert.PropertyChanged(tea, "SpecialInstructions", () => {
+            Assert.PropertyChanged(tea, "SpecialInstructions", () =>
+            {
                 tea.Size = Size.Medium;
             });
         }
@@ -937,7 +1060,8 @@ namespace CowboyCafe.DataTests
         public void TexasTeaChangingLemonShouldInvokePropertyChangedForLemon()
         {
             var tea = new TexasTea();
-            Assert.PropertyChanged(tea, "Lemon", () => {
+            Assert.PropertyChanged(tea, "Lemon", () =>
+            {
                 tea.Lemon = true;
             });
         }
@@ -946,7 +1070,8 @@ namespace CowboyCafe.DataTests
         public void TexasTeaChangingLemonShouldInvokePropertyChangedForSpecialInstructions()
         {
             var tea = new TexasTea();
-            Assert.PropertyChanged(tea, "SpecialInstructions", () => {
+            Assert.PropertyChanged(tea, "SpecialInstructions", () =>
+            {
                 tea.Lemon = true;
             });
         }
@@ -955,7 +1080,8 @@ namespace CowboyCafe.DataTests
         public void TexasTeaChangingSweetShouldInvokePropertyChangedForSweet()
         {
             var tea = new TexasTea();
-            Assert.PropertyChanged(tea, "Sweet", () => {
+            Assert.PropertyChanged(tea, "Sweet", () =>
+            {
                 tea.Sweet = false;
             });
         }
@@ -964,7 +1090,8 @@ namespace CowboyCafe.DataTests
         public void TexasTeaChangingSweetShouldInvokePropertyChangedForSpecialInstructions()
         {
             var tea = new TexasTea();
-            Assert.PropertyChanged(tea, "SpecialInstructions", () => {
+            Assert.PropertyChanged(tea, "SpecialInstructions", () =>
+            {
                 tea.Sweet = false;
             });
         }
@@ -973,7 +1100,8 @@ namespace CowboyCafe.DataTests
         public void TexasTeaChangingIceShouldInvokePropertyChangedForIce()
         {
             var tea = new TexasTea();
-            Assert.PropertyChanged(tea, "Ice", () => {
+            Assert.PropertyChanged(tea, "Ice", () =>
+            {
                 tea.Ice = false;
             });
         }
@@ -982,7 +1110,8 @@ namespace CowboyCafe.DataTests
         public void TexasTeaChangingIceShouldInvokePropertyChangedForSpecialInstructions()
         {
             var tea = new TexasTea();
-            Assert.PropertyChanged(tea, "SpecialInstructions", () => {
+            Assert.PropertyChanged(tea, "SpecialInstructions", () =>
+            {
                 tea.Ice = false;
             });
         }
@@ -991,7 +1120,8 @@ namespace CowboyCafe.DataTests
         public void WaterChangingSizeShouldInvokePropertyChangedForSize()
         {
             var water = new Water();
-            Assert.PropertyChanged(water, "Size", () => {
+            Assert.PropertyChanged(water, "Size", () =>
+            {
                 water.Size = Size.Medium;
             });
         }
@@ -1000,7 +1130,8 @@ namespace CowboyCafe.DataTests
         public void WaterChangingSizeShouldInvokePropertyChangedForPrice()
         {
             var water = new Water();
-            Assert.PropertyChanged(water, "Price", () => {
+            Assert.PropertyChanged(water, "Price", () =>
+            {
                 water.Size = Size.Medium;
             });
         }
@@ -1009,7 +1140,8 @@ namespace CowboyCafe.DataTests
         public void WaterChangingSizeShouldInvokePropertyChangedForSpecialInstructions()
         {
             var water = new Water();
-            Assert.PropertyChanged(water, "SpecialInstructions", () => {
+            Assert.PropertyChanged(water, "SpecialInstructions", () =>
+            {
                 water.Size = Size.Medium;
             });
         }
@@ -1018,7 +1150,8 @@ namespace CowboyCafe.DataTests
         public void WaterChangingLemonShouldInvokePropertyChangedForLemon()
         {
             var water = new Water();
-            Assert.PropertyChanged(water, "Lemon", () => {
+            Assert.PropertyChanged(water, "Lemon", () =>
+            {
                 water.Lemon = true;
             });
         }
@@ -1027,7 +1160,8 @@ namespace CowboyCafe.DataTests
         public void WaterChangingLemonShouldInvokePropertyChangedForSpecialInstructions()
         {
             var water = new Water();
-            Assert.PropertyChanged(water, "SpecialInstructions", () => {
+            Assert.PropertyChanged(water, "SpecialInstructions", () =>
+            {
                 water.Lemon = true;
             });
         }
@@ -1036,7 +1170,8 @@ namespace CowboyCafe.DataTests
         public void WaterChangingIceShouldInvokePropertyChangedForIce()
         {
             var water = new Water();
-            Assert.PropertyChanged(water, "Ice", () => {
+            Assert.PropertyChanged(water, "Ice", () =>
+            {
                 water.Ice = false;
             });
         }
@@ -1045,7 +1180,8 @@ namespace CowboyCafe.DataTests
         public void WaterChangingIceShouldInvokePropertyChangedForSpecialInstructions()
         {
             var water = new Water();
-            Assert.PropertyChanged(water, "SpecialInstructions", () => {
+            Assert.PropertyChanged(water, "SpecialInstructions", () =>
+            {
                 water.Ice = false;
             });
         }
@@ -1055,10 +1191,10 @@ namespace CowboyCafe.DataTests
         {
             var item = new AngryChicken();
             var order = new Order();
-            Assert.PropertyChanged(order, "Items", () => {
+            Assert.PropertyChanged(order, "Items", () =>
+            {
                 order.Add(item);
             });
-            
         }
 
         [Fact]
@@ -1066,7 +1202,8 @@ namespace CowboyCafe.DataTests
         {
             var item = new AngryChicken();
             var order = new Order();
-            Assert.PropertyChanged(order, "Subtotal", () => {
+            Assert.PropertyChanged(order, "Subtotal", () =>
+            {
                 order.Add(item);
             });
         }
@@ -1076,7 +1213,8 @@ namespace CowboyCafe.DataTests
         {
             var item = new AngryChicken();
             var order = new Order();
-            Assert.PropertyChanged(order, "Price", () => {
+            Assert.PropertyChanged(order, "Price", () =>
+            {
                 order.Add(item);
             });
         }
@@ -1087,10 +1225,10 @@ namespace CowboyCafe.DataTests
             var item = new AngryChicken();
             var order = new Order();
             order.Add(item);
-            Assert.PropertyChanged(order, "Items", () => {
+            Assert.PropertyChanged(order, "Items", () =>
+            {
                 order.Remove(item);
             });
-
         }
 
         [Fact]
@@ -1099,7 +1237,8 @@ namespace CowboyCafe.DataTests
             var item = new AngryChicken();
             var order = new Order();
             order.Add(item);
-            Assert.PropertyChanged(order, "Subtotal", () => {
+            Assert.PropertyChanged(order, "Subtotal", () =>
+            {
                 order.Remove(item);
             });
         }
@@ -1110,7 +1249,8 @@ namespace CowboyCafe.DataTests
             var item = new AngryChicken();
             var order = new Order();
             order.Add(item);
-            Assert.PropertyChanged(order, "Price", () => {
+            Assert.PropertyChanged(order, "Price", () =>
+            {
                 order.Remove(item);
             });
         }

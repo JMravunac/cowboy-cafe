@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CowboyCafe.Data;
+﻿using CowboyCafe.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Website.Pages
 {
@@ -19,12 +18,12 @@ namespace Website.Pages
         }
 
         /// <summary>
-        /// The items to display on the index page 
+        /// The items to display on the index page
         /// </summary>
         public IEnumerable<IOrderItem> Items { get; protected set; }
 
         /// <summary>
-        /// The current search terms 
+        /// The current search terms
         /// </summary>
         [BindProperty]
         public string SearchTerms { get; set; }
@@ -62,7 +61,6 @@ namespace Website.Pages
         public void OnGet()
         {
             Items = Menu.CompleteMenu;
-            
         }
 
         public void OnPost()
@@ -73,21 +71,21 @@ namespace Website.Pages
             {
                 Items = Items.Where(item => item.ToString() != null && item.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
             }
-           
-            // Filter by item type  
+
+            // Filter by item type
             if (Category != null && Category.Length != 0)
-            {                
-                    Items = Items.Where(item => (item is Entree entree && Category.Contains("Entree")) || (item is Side side && Category.Contains("Side")) || (item is Drink drink && Category.Contains("Drink")));             
-            }
-            
-            //filters items based on calories
-            if(CalorieMin != null || CalorieMax != null)
             {
-                if(CalorieMin == null)
+                Items = Items.Where(item => (item is Entree entree && Category.Contains("Entree")) || (item is Side side && Category.Contains("Side")) || (item is Drink drink && Category.Contains("Drink")));
+            }
+
+            //filters items based on calories
+            if (CalorieMin != null || CalorieMax != null)
+            {
+                if (CalorieMin == null)
                 {
                     Items = Items.Where(item => item.Calories <= CalorieMax);
                 }
-                else if(CalorieMax == null)
+                else if (CalorieMax == null)
                 {
                     Items = Items.Where(item => item.Calories >= CalorieMin);
                 }
@@ -113,8 +111,6 @@ namespace Website.Pages
                     Items = Items.Where(item => item.Price <= PriceMax && item.Price >= PriceMin);
                 }
             }
-           
-
         }
     }
 }

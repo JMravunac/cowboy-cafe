@@ -1,11 +1,11 @@
 ﻿/*
 * Jack Mravunac
-* CowboyCoffee.cs 
+* CowboyCoffee.cs
 * Class representing cowboy coffee
 */
+
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -50,6 +50,7 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+
         /// <summary>
         /// checks if size is medium and sets size to medium
         /// </summary>
@@ -62,6 +63,7 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+
         /// <summary>
         /// checks if size is large and sets size to large
         /// </summary>
@@ -75,8 +77,6 @@ namespace CowboyCafe.Data
             }
         }
 
-
-
         /// <summary>
         /// The calories in the coffee
         /// </summary>
@@ -88,16 +88,16 @@ namespace CowboyCafe.Data
                 {
                     case Size.Large:
                         return 7;
+
                     case Size.Medium:
                         return 5;
+
                     case Size.Small:
                         return 3;
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
-                
-
             }
         }
 
@@ -112,26 +112,29 @@ namespace CowboyCafe.Data
                 {
                     case Size.Large:
                         return 1.60;
+
                     case Size.Medium:
                         return 1.10;
+
                     case Size.Small:
                         return 0.60;
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
-
             }
         }
 
         private bool roomForCream = false;
+
         /// <summary>
         /// If the coffee has room for cream
         /// </summary>
         public bool RoomForCream
         {
             get { return roomForCream; }
-            set { 
+            set
+            {
                 roomForCream = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RoomForCream"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -139,13 +142,15 @@ namespace CowboyCafe.Data
         }
 
         private bool decaf = false;
+
         /// <summary>
         /// If the coffee has room for cream
         /// </summary>
         public bool Decaf
         {
             get { return decaf; }
-            set { 
+            set
+            {
                 decaf = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Decaf"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -153,6 +158,7 @@ namespace CowboyCafe.Data
         }
 
         private bool ice = false;
+
         /// <summary>
         /// If the drink has ice
         /// </summary>
@@ -185,32 +191,36 @@ namespace CowboyCafe.Data
 
         public override string ToString()
         {
-            if(Decaf)
+            if (Decaf)
             {
                 switch (Size)
                 {
                     case Size.Large:
                         return "Large Decaf Cowboy Coffee";
+
                     case Size.Medium:
                         return "Medium Decaf Cowboy Coffee";
+
                     case Size.Small:
                         return "Small Decaf Cowboy Coffee";
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
             }
             switch (Size)
             {
                 case Size.Large:
                     return "Large Cowboy Coffee";
+
                 case Size.Medium:
                     return "Medium Cowboy Coffee";
+
                 case Size.Small:
                     return "Small Cowboy Coffee";
+
                 default:
                     throw new NotImplementedException("Unknown size");
-
             }
         }
     }

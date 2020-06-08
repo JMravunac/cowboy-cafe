@@ -1,12 +1,13 @@
 ﻿/*
 * Nathan Bean
 * Edited by Jack Mravunac
-* CowpokeChili.cs 
+* CowpokeChili.cs
 * Class representing the cowpoke chili entree
 */
-using System;
+
 using System.Collections.Generic;
 using System.ComponentModel;
+
 namespace CowboyCafe.Data
 {
     /// <summary>
@@ -20,13 +21,15 @@ namespace CowboyCafe.Data
         public event PropertyChangedEventHandler PropertyChanged;
 
         private bool cheese = true;
+
         /// <summary>
         /// If the chili is topped with cheese
         /// </summary>
         public bool Cheese
         {
             get { return cheese; }
-            set { 
+            set
+            {
                 cheese = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheese")); //Do for all instructions in all items
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -34,27 +37,31 @@ namespace CowboyCafe.Data
         }
 
         private bool sourCream = true;
+
         /// <summary>
         /// If the chili is topped with sour cream
         /// </summary>
         public bool SourCream
         {
             get { return sourCream; }
-            set { 
+            set
+            {
                 sourCream = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SourCream")); 
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SourCream"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
         }
 
         private bool greenOnions = true;
+
         /// <summary>
         /// If the chili is topped with green onions
         /// </summary>
         public bool GreenOnions
         {
             get { return greenOnions; }
-            set { 
+            set
+            {
                 greenOnions = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GreenOnions"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -62,13 +69,15 @@ namespace CowboyCafe.Data
         }
 
         private bool tortillaStrips = true;
+
         /// <summary>
         /// If the chili is topped with tortilla strips
         /// </summary>
         public bool TortillaStrips
         {
             get { return tortillaStrips; }
-            set { 
+            set
+            {
                 tortillaStrips = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TortillaStrips"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -121,4 +130,3 @@ namespace CowboyCafe.Data
         }
     }
 }
-

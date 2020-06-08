@@ -5,7 +5,6 @@
 }
 @using CowboyCafe.Data;
 
-
 <div class="text-center">
     <h1 class="display-4">Cowboy Cafe</h1>
     <p>
@@ -14,8 +13,6 @@
         Dip your Pan de Campo into a bowl of beans. Or conquer the the mighty Texas Triple Burger! You’ve had a hard ride - so take it easy with us.
     </p>
 </div>
-
-
 
 <form id="menuDatabase" method="post">
 
@@ -35,7 +32,6 @@
             </label>
         }
 
-
         <h4>Calories</h4>
         <div>
             Between
@@ -51,12 +47,8 @@
             and
             <input name="PriceMax" type="number" min="0" max="10" step="0.01" placeholder="max" value="@Model.PriceMax" />
         </div>
-
-    </div>   
-
+    </div>
 </form>
-
-
 
 <div class="flex-columns">
 
@@ -70,20 +62,19 @@
                 {
                     if (entree.ToString().Contains(item.ToString()))
                     {
-            <li>
-                <h3>@item.ToString()</h3>
-                <div class="price">
-                    $@item.Price
-                </div>
-                <div class="calories">
-                    Calories:@item.Calories
-                </div>
-            </li>
-                        }
+                        <li>
+                            <h3>@item.ToString()</h3>
+                            <div class="price">
+                                $@item.Price
+                            </div>
+                            <div class="calories">
+                                Calories:@item.Calories
+                            </div>
+                        </li>
                     }
-
                 }
 
+            }
         </ul>
     </div>
     <div>
@@ -108,7 +99,6 @@
                 }
 
             }
-
         </ul>
     </div>
     <div>
@@ -120,20 +110,20 @@
                 {
                     if (drink.ToString().Contains(item.ToString()) && drink.ToString().Contains("Jerked"))
                     {
-            <li>
-                <h3>@item.ToString().Remove(0, 5)</h3>
-                <h5>Birch Beer</h5>
-                <h5>Cream Soda</h5>
-                <h5>Orange Soda</h5>
-                <h5>Sarsparilla</h5>
-                <h5>Root Beer</h5>
-                <div class="price">
-                    $@item.Price
-                </div>
-                <div class="calories">
-                    Calories:@item.Calories
-                </div>
-            </li>
+                        <li>
+                            <h3>@item.ToString().Remove(0, 5)</h3>
+                            <h5>Birch Beer</h5>
+                            <h5>Cream Soda</h5>
+                            <h5>Orange Soda</h5>
+                            <h5>Sarsparilla</h5>
+                            <h5>Root Beer</h5>
+                            <div class="price">
+                                $@item.Price
+                            </div>
+                            <div class="calories">
+                                Calories:@item.Calories
+                            </div>
+                        </li>
                     }
                     else if (drink.ToString().Contains(item.ToString()))
                     {
@@ -150,8 +140,6 @@
                 }
 
             }
-
         </ul>
     </div>
-
 </div>

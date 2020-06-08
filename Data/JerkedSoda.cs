@@ -1,11 +1,11 @@
 ﻿/*
 * Jack Mravunac
-* JerkedSoda.cs 
+* JerkedSoda.cs
 * Class representing jerked soda
 */
+
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -50,6 +50,7 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+
         /// <summary>
         /// checks if size is medium and sets size to medium
         /// </summary>
@@ -62,6 +63,7 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+
         /// <summary>
         /// checks if size is large and sets size to large
         /// </summary>
@@ -83,13 +85,15 @@ namespace CowboyCafe.Data
                 {
                     case Size.Large:
                         return 198;
+
                     case Size.Medium:
                         return 146;
+
                     case Size.Small:
                         return 110;
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
             }
         }
@@ -105,26 +109,29 @@ namespace CowboyCafe.Data
                 {
                     case Size.Large:
                         return 2.59;
+
                     case Size.Medium:
                         return 2.10;
+
                     case Size.Small:
                         return 1.59;
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
-
             }
         }
 
         private SodaFlavor flavor = SodaFlavor.BirchBeer;
+
         /// <summary>
         /// getter/setter for soda flavor
         /// </summary>
         public SodaFlavor Flavor
         {
             get { return this.flavor; }
-            set { 
+            set
+            {
                 this.flavor = value;
 
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Flavor"));
@@ -204,6 +211,7 @@ namespace CowboyCafe.Data
         }
 
         private bool ice = true;
+
         /// <summary>
         /// If the drink has ice
         /// </summary>
@@ -217,7 +225,6 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
         }
-
 
         /// <summary>
         /// Special instructions for the soda
@@ -233,6 +240,7 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
         public override string ToString()
         {
             string tempFlavor = "";
@@ -241,15 +249,19 @@ namespace CowboyCafe.Data
                 case SodaFlavor.BirchBeer:
                     tempFlavor = "Birch Beer";
                     break;
+
                 case SodaFlavor.CreamSoda:
                     tempFlavor = "Cream Soda";
                     break;
+
                 case SodaFlavor.OrangeSoda:
                     tempFlavor = "Orange Soda";
                     break;
+
                 case SodaFlavor.RootBeer:
                     tempFlavor = "Root Beer";
                     break;
+
                 case SodaFlavor.Sarsparilla:
                     tempFlavor = "Sarsparilla";
                     break;
@@ -258,13 +270,15 @@ namespace CowboyCafe.Data
             {
                 case Size.Large:
                     return $"Large {tempFlavor} Jerked Soda";
+
                 case Size.Medium:
                     return $"Medium {tempFlavor} Jerked Soda";
+
                 case Size.Small:
                     return $"Small {tempFlavor} Jerked Soda";
+
                 default:
                     throw new NotImplementedException("Unknown size");
-
             }
         }
     }

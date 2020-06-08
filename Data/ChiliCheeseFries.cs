@@ -1,16 +1,15 @@
 ﻿/*
 * Jack Mravunac
-* ChiliCheeseFries.cs 
+* ChiliCheeseFries.cs
 * Class representing the chili cheese fries side
 */
+
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
-    public class ChiliCheeseFries:Side, INotifyPropertyChanged
+    public class ChiliCheeseFries : Side, INotifyPropertyChanged
     {
         /// <summary>
         /// The property changed event
@@ -50,6 +49,7 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+
         /// <summary>
         /// checks if size is medium and sets size to medium
         /// </summary>
@@ -62,6 +62,7 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+
         /// <summary>
         /// checks if size is large and sets size to large
         /// </summary>
@@ -75,7 +76,6 @@ namespace CowboyCafe.Data
             }
         }
 
-
         /// <summary>
         /// The calories in the fries
         /// </summary>
@@ -83,19 +83,20 @@ namespace CowboyCafe.Data
         {
             get
             {
-                switch(Size)
+                switch (Size)
                 {
                     case Size.Large:
                         return 610;
+
                     case Size.Medium:
                         return 524;
+
                     case Size.Small:
                         return 433;
+
                     default:
                         throw new NotImplementedException("Unknown size");
-                    
                 }
-                
             }
         }
 
@@ -110,15 +111,16 @@ namespace CowboyCafe.Data
                 {
                     case Size.Large:
                         return 3.99;
+
                     case Size.Medium:
                         return 2.99;
+
                     case Size.Small:
                         return 1.99;
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
-
             }
         }
 
@@ -128,13 +130,15 @@ namespace CowboyCafe.Data
             {
                 case Size.Large:
                     return "Large Chili Cheese Fries";
+
                 case Size.Medium:
                     return "Medium Chili Cheese Fries";
+
                 case Size.Small:
                     return "Small Chili Cheese Fries";
+
                 default:
                     throw new NotImplementedException("Unknown size");
-
             }
         }
     }

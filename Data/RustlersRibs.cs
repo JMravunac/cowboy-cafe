@@ -1,9 +1,9 @@
 ﻿/*
 * Jack Mravunac
-* RustlersRibs.cs 
+* RustlersRibs.cs
 * Class representing the rustlers ribs entree
 */
-using System;
+
 using System.Collections.Generic;
 using System.ComponentModel;
 
@@ -14,7 +14,6 @@ namespace CowboyCafe.Data
     /// </summary>
     public class RustlersRibs : Entree, INotifyPropertyChanged
     {
-
         /// <summary>
         /// The property changed event
         /// </summary>
@@ -48,17 +47,13 @@ namespace CowboyCafe.Data
             {
                 var instructions = new List<string>();
 
-
                 return instructions;
             }
         }
 
-        
         public override string ToString()
         {
             return "Rustler's Ribs";
         }
-
     }
 }
-

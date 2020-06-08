@@ -1,8 +1,6 @@
-﻿using System;
+﻿using CowboyCafe.Data;
 using System.Collections.Generic;
-using System.Text;
 using Xunit;
-using CowboyCafe.Data;
 
 namespace CowboyCafe.DataTests
 {
@@ -16,6 +14,7 @@ namespace CowboyCafe.DataTests
 
             public uint Calories { get; set; }
         }
+
         [Fact]
         public void ShouldBeAbleToAddItems()
         {
@@ -59,20 +58,19 @@ namespace CowboyCafe.DataTests
         [InlineData(new double[] { })]
         [InlineData(new double[] { -5 })]
         [InlineData(new double[] { -4, 10, 8 })]
-        [InlineData(new double[] {3.1345234262})]
-        [InlineData(new double[] { double.NaN})]
+        [InlineData(new double[] { 3.1345234262 })]
+        [InlineData(new double[] { double.NaN })]
         public void SubtotalShouldBeTheSumOfItemPrices(double[] prices)
         {
             var order = new Order();
             double total = 0;
-            foreach(var price in prices)
+            foreach (var price in prices)
             {
                 total += price;
                 order.Add(new MockOrderItem()
                 {
                     Price = price
                 });
-
             }
             Assert.Equal(total, order.Subtotal);
         }
@@ -102,6 +100,5 @@ namespace CowboyCafe.DataTests
                 order.Remove(item);
             });
         }
-
     }
 }

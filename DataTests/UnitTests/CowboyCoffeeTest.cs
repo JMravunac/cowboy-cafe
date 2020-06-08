@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CowboyCafe.Data;
 using Xunit;
-using CowboyCafe.Data;
 
 namespace CowboyCafe.DataTests
 {
     public class CowboyCoffeeTest
     {
-
         [Fact]
         public void ShouldNotBeIcedByDefault()
         {

@@ -1,17 +1,6 @@
 ﻿using CowboyCafe.Data;
-using PointOfSale.ExtensionMethods;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PointOfSale
 {
@@ -28,7 +17,6 @@ namespace PointOfSale
             CancelOrderButton.Click += CancelOrderButtonClick;
             CompleteOrderButton.Click += CompleteOrderButtonClick;
             DataContext = new Order();
-
         }
 
         private void ItemSelectionButtonClick(object sender, RoutedEventArgs e)
@@ -45,7 +33,7 @@ namespace PointOfSale
 
         //Finishes the order on press
         private void CompleteOrderButtonClick(object sender, RoutedEventArgs e)
-        {            
+        {
             full.Child = new TransactionControl();
         }
 

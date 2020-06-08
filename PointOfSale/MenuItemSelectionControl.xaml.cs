@@ -1,18 +1,8 @@
 ﻿using CowboyCafe.Data;
 using PointOfSale.CustomizationScreens;
 using PointOfSale.ExtensionMethods;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PointOfSale
 {
@@ -52,14 +42,12 @@ namespace PointOfSale
             AngryChicken temp = new AngryChicken();
             var screen = new AngryChickenCustiomiztion();
             screen.DataContext = temp;
-            if(DataContext is Order order)
+            if (DataContext is Order order)
             {
                 order.Add(temp);
                 orderControl?.SwapScreen(screen);
-                
             }
         }
-
 
         private void AddCowpokeChiliButtonClick(object sender, RoutedEventArgs e)
         {

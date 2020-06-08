@@ -1,11 +1,11 @@
 ﻿/*
 * Jack Mravunac
-* Entree.cs 
+* Entree.cs
 * Base class for the entrees
 */
+
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CowboyCafe.Data
 {
@@ -30,4 +30,3 @@ namespace CowboyCafe.Data
         public abstract List<String> SpecialInstructions { get; }
     }
 }
-

@@ -1,11 +1,10 @@
 ﻿/*
 * Jack Mravunac
-* PanDeCampo.cs 
+* PanDeCampo.cs
 * Class representing the Pan De Campo side
 */
+
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -24,7 +23,7 @@ namespace CowboyCafe.Data
         /// </summary>
         public override Size Size
         {
-            get{return this.size;}
+            get { return this.size; }
             set
             {
                 this.size = value;
@@ -50,6 +49,7 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+
         /// <summary>
         /// checks if size is medium and sets size to medium
         /// </summary>
@@ -62,6 +62,7 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+
         /// <summary>
         /// checks if size is large and sets size to large
         /// </summary>
@@ -86,15 +87,16 @@ namespace CowboyCafe.Data
                 {
                     case Size.Large:
                         return 367;
+
                     case Size.Medium:
                         return 269;
+
                     case Size.Small:
                         return 227;
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
-
             }
         }
 
@@ -109,15 +111,16 @@ namespace CowboyCafe.Data
                 {
                     case Size.Large:
                         return 1.99;
+
                     case Size.Medium:
                         return 1.79;
+
                     case Size.Small:
                         return 1.59;
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
-
             }
         }
 
@@ -127,13 +130,15 @@ namespace CowboyCafe.Data
             {
                 case Size.Large:
                     return "Large Pan de Campo";
+
                 case Size.Medium:
                     return "Medium Pan de Campo";
+
                 case Size.Small:
                     return "Small Pan de Campo";
+
                 default:
                     throw new NotImplementedException("Unknown size");
-
             }
         }
     }

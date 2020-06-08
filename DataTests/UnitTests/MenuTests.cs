@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CowboyCafe.Data;
 using System.Linq;
-using System.Text;
-using CowboyCafe.Data;
 using Xunit;
 
 namespace CowboyCafe.DataTests.UnitTests
@@ -51,12 +48,12 @@ namespace CowboyCafe.DataTests.UnitTests
             Assert.Collection(
                 Menu.Entrees,
                 (ac) => { Assert.IsType<AngryChicken>(ac); },
-                (cc) => { Assert.IsType<CowpokeChili>(cc); },                
+                (cc) => { Assert.IsType<CowpokeChili>(cc); },
                 (ppp) => { Assert.IsType<PecosPulledPork>(ppp); },
                 (rr) => { Assert.IsType<RustlersRibs>(rr); },
                 (tb) => { Assert.IsType<TrailBurger>(tb); },
                 (ddb) => { Assert.IsType<DakotaDoubleBurger>(ddb); },
-                (ttb) => { Assert.IsType<TexasTripleBurger>(ttb); }                
+                (ttb) => { Assert.IsType<TexasTripleBurger>(ttb); }
                 );
         }
 

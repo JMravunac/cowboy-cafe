@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace CowboyCafe.Data
 {
@@ -14,6 +12,5 @@ namespace CowboyCafe.Data
         uint Calories { get; }
 
         List<string> SpecialInstructions { get; }
-
     }
 }

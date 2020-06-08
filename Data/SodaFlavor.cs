@@ -1,11 +1,8 @@
 ﻿/*
 * Jack Mravunac
-* SodaFlavor.cs 
+* SodaFlavor.cs
 * Enum for the flavors of soda
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CowboyCafe.Data
 {

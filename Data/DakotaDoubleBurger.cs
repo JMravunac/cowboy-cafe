@@ -1,9 +1,9 @@
 ﻿/*
 * Jack Mravunac
-* DakotaDoubleBurger.cs 
+* DakotaDoubleBurger.cs
 * Class representing the dakota double burger entree
 */
-using System;
+
 using System.Collections.Generic;
 using System.ComponentModel;
 
@@ -20,13 +20,15 @@ namespace CowboyCafe.Data
         public event PropertyChangedEventHandler PropertyChanged;
 
         private bool bun = true;
+
         /// <summary>
         /// If the burger has a bun
         /// </summary>
         public bool Bun
         {
             get { return bun; }
-            set { 
+            set
+            {
                 bun = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bun"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -34,13 +36,15 @@ namespace CowboyCafe.Data
         }
 
         private bool cheese = true;
+
         /// <summary>
         /// If the burger has cheese
         /// </summary>
         public bool Cheese
         {
             get { return cheese; }
-            set { 
+            set
+            {
                 cheese = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheese"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -48,13 +52,15 @@ namespace CowboyCafe.Data
         }
 
         private bool ketchup = true;
+
         /// <summary>
         /// If the burger has ketchup
         /// </summary>
         public bool Ketchup
         {
             get { return ketchup; }
-            set { 
+            set
+            {
                 ketchup = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ketchup"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -62,13 +68,15 @@ namespace CowboyCafe.Data
         }
 
         private bool mustard = true;
+
         /// <summary>
         /// If the burger has mustard
         /// </summary>
         public bool Mustard
         {
             get { return mustard; }
-            set { 
+            set
+            {
                 mustard = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mustard"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -76,13 +84,15 @@ namespace CowboyCafe.Data
         }
 
         private bool pickle = true;
+
         /// <summary>
         /// If the burger has pickles
         /// </summary>
         public bool Pickle
         {
             get { return pickle; }
-            set { 
+            set
+            {
                 pickle = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pickle"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -90,13 +100,15 @@ namespace CowboyCafe.Data
         }
 
         private bool tomato = true;
+
         /// <summary>
         /// If the burger has tomato
         /// </summary>
         public bool Tomato
         {
             get { return tomato; }
-            set { 
+            set
+            {
                 tomato = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tomato"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -104,13 +116,15 @@ namespace CowboyCafe.Data
         }
 
         private bool lettuce = true;
+
         /// <summary>
         /// If the burger has lettuce
         /// </summary>
         public bool Lettuce
         {
             get { return lettuce; }
-            set { 
+            set
+            {
                 lettuce = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lettuce"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -118,13 +132,15 @@ namespace CowboyCafe.Data
         }
 
         private bool mayo = true;
+
         /// <summary>
         /// If the burger has mayo
         /// </summary>
         public bool Mayo
         {
             get { return mayo; }
-            set { 
+            set
+            {
                 mayo = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mayo"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -181,4 +197,3 @@ namespace CowboyCafe.Data
         }
     }
 }
-

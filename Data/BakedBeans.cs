@@ -1,11 +1,10 @@
 ﻿/*
 * Jack Mravunac
-* BakedBeans.cs 
+* BakedBeans.cs
 * Class representing the baked beans side
 */
+
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -50,6 +49,7 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+
         /// <summary>
         /// checks if size is medium and sets size to medium
         /// </summary>
@@ -62,6 +62,7 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+
         /// <summary>
         /// checks if size is large and sets size to large
         /// </summary>
@@ -75,7 +76,6 @@ namespace CowboyCafe.Data
             }
         }
 
-
         /// <summary>
         /// The calories in the beans
         /// </summary>
@@ -87,15 +87,16 @@ namespace CowboyCafe.Data
                 {
                     case Size.Large:
                         return 410;
+
                     case Size.Medium:
                         return 378;
+
                     case Size.Small:
                         return 312;
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
-
             }
         }
 
@@ -110,15 +111,16 @@ namespace CowboyCafe.Data
                 {
                     case Size.Large:
                         return 1.99;
+
                     case Size.Medium:
                         return 1.79;
+
                     case Size.Small:
                         return 1.59;
+
                     default:
                         throw new NotImplementedException("Unknown size");
-
                 }
-
             }
         }
 
@@ -128,13 +130,15 @@ namespace CowboyCafe.Data
             {
                 case Size.Large:
                     return "Large Baked Beans";
+
                 case Size.Medium:
                     return "Medium Baked Beans";
+
                 case Size.Small:
                     return "Small Baked Beans";
+
                 default:
                     throw new NotImplementedException("Unknown size");
-
             }
         }
     }

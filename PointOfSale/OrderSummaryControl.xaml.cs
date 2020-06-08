@@ -1,18 +1,8 @@
 ﻿using CowboyCafe.Data;
 using PointOfSale.CustomizationScreens;
 using PointOfSale.ExtensionMethods;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PointOfSale
 {
@@ -32,10 +22,9 @@ namespace PointOfSale
             var screen = new MenuItemSelectionControl();
             if (DataContext is Order order)
             {
-                var btn = sender as Button; 
+                var btn = sender as Button;
                 order.Remove(btn.DataContext as IOrderItem);
                 orderControl?.SwapScreen(screen);
-
             }
         }
 
@@ -51,7 +40,7 @@ namespace PointOfSale
             {
                 var orderControl = this.FindAncestor<OrderControl>();
                 RustlersRibs item = e.AddedItems[0] as RustlersRibs;
-                if(DataContext is Order order)
+                if (DataContext is Order order)
                 {
                     var screen = new RustlersRibsCustomization();
                     screen.DataContext = item;
@@ -226,7 +215,6 @@ namespace PointOfSale
                     orderControl?.SwapScreen(screen);
                 }
             }
-
         }
     }
 }

@@ -9,5 +9,4 @@
     <Grid>
         <local:OrderControl></local:OrderControl>
     </Grid>
-    
 </Window>

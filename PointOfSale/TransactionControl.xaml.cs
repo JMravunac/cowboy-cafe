@@ -2,17 +2,8 @@
 using CowboyCafe.Data;
 using PointOfSale.ExtensionMethods;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PointOfSale
 {
@@ -36,7 +27,7 @@ namespace PointOfSale
             ResultCode code = terminal.ProcessTransaction(tempTotal);
             bool card = true;
 
-            if(code == ResultCode.Success)
+            if (code == ResultCode.Success)
             {
                 PrintReceipt(card);
                 var orderControl = this.FindAncestor<OrderControl>();
@@ -48,12 +39,10 @@ namespace PointOfSale
             {
                 ErrorCode.Text = code.ToString();
             }
-
         }
 
         private void CashButtonClick(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void CancelButtonClick(object sender, RoutedEventArgs e)
@@ -69,16 +58,16 @@ namespace PointOfSale
             ReceiptPrinter printer = new ReceiptPrinter();
             DateTime currentTime = DateTime.Now;
 
-            if(DataContext is Order order)
+            if (DataContext is Order order)
             {
                 printer.Print("Order Number:\t" + Order.OrderNumber.ToString());
                 printer.Print("\n" + currentTime.ToString() + "\n\n");
 
-                foreach(IOrderItem item in order.Items)
+                foreach (IOrderItem item in order.Items)
                 {
                     printer.Print(item.ToString() + "\t" + item.Price.ToString("C2") + "\n");
                     int temp = 0;
-                    while(temp < item.SpecialInstructions.Count)
+                    while (temp < item.SpecialInstructions.Count)
                     {
                         printer.Print("\t" + item.SpecialInstructions[temp].ToString() + "\n");
                         temp++;
